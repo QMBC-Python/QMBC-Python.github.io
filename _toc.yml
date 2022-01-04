@@ -1,2 +1,9 @@
 format: jb-book
 root: intro
+parts:
+  - caption: Content
+    chapters:
+      - file: content/intro1.md
+  - caption: Homework
+    chapters:
+      - file: homeworks/homework1.md
