@@ -1,4 +1,5 @@
 # Quantitative Methods for Biologists - Python (Neurobio 323QC)
+## J-term 2022
 Also known as Quantitative Methods Bootcamp or Python Bootcamp
 
 # Course description
