@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quantitative Methods for Biologists - Python (Neurobio 323QC) &#8212; Quantitative Methods for Biologists - Python</title>
+    <title>Introduction &#8212; Quantitative Methods for Biologists - Python</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -41,7 +41,7 @@
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe,.cell"
@@ -51,6 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Day 1" href="content/intro1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -85,10 +86,35 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   Quantitative Methods for Biologists - Python (Neurobio 323QC)
+   Introduction
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Content
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="content/intro1.html">
+   Day 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Homework
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="homeworks/homework1.html">
+   Homework for Day 1
+  </a>
+ </li>
+</ul>
+
     </div>
 </nav> <!-- To handle the deprecated key -->
 
@@ -133,7 +159,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -151,7 +177,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -160,7 +186,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   Quantitative Methods for Biologists - Python (Neurobio 323QC)
+   Introduction
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -171,6 +197,11 @@
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#instructors-teaching-assistants">
    Instructors &amp; Teaching Assistants
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#components-of-course">
+   Components of course
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
@@ -187,6 +218,8 @@
   <a class="reference internal nav-link" href="#grading">
    Grading
   </a>
+  <ul class="visible nav section-nav flex-column">
+  </ul>
  </li>
 </ul>
 
@@ -194,35 +227,301 @@
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>Introduction</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> Contents </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#course-description">
+   Course description
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instructors-teaching-assistants">
+   Instructors &amp; Teaching Assistants
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#components-of-course">
+   Components of course
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dates-content">
+   Dates &amp; content*
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prerequisites">
+   Prerequisites
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grading">
+   Grading
+  </a>
+  <ul class="visible nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="quantitative-methods-for-biologists-python-neurobio-323qc">
-<h1>Quantitative Methods for Biologists - Python (Neurobio 323QC)<a class="headerlink" href="#quantitative-methods-for-biologists-python-neurobio-323qc" title="Permalink to this headline">¶</a></h1>
-<p>J-term 2022</p>
-<p>Also known as Quantitative Methods Bootcamp or Python Bootcamp</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the course site for Quantitative Methods for Biologists (Neurobio 323QC), also known as Quantitative Methods Bootcamp or Python Bootcamp!</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="course-description">
 <h1>Course description<a class="headerlink" href="#course-description" title="Permalink to this headline">¶</a></h1>
+<p>The goal of this bootcamp is to introduce you to programming in Python and to show you the power this provides for analyzing data and for gaining intuition about the behavior of complex systems through the use of numerical simulations. Some of you, upon encountering in the previous sentence words like “programming” and “numerical simulations,” will feel the cold hand of fear grip your stomach, because you have never done any programming and, in fact, have tried to avoid math as much as possible. If so, YOU ARE PRECISELY THE PERSON WE HAD IN MIND as we were planning the course. We are aiming to help you break through this barrier of darkness and fear into the radiant sunshine of quantitative enlightenment. The true beauty of Python, as we will personally demonstrate, is that it allows people who are not mathematically adept (e.g. some of the instructors of this course) to use powerful numerical methods and visualization tools to gain an understanding of concepts that are very difficult to grasp analytically.</p>
+<p>This course is based heavily on the Matlab version, pioneered by Mike Springer and Richard Born: https://springerlab.org/qmbc/.</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="instructors-teaching-assistants">
 <h1>Instructors &amp; Teaching Assistants<a class="headerlink" href="#instructors-teaching-assistants" title="Permalink to this headline">¶</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Role</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Instructor</p></td>
+<td><p>Eleanor Batty</p></td>
+<td><p>Associate Director of Computational Neuroscience, Department of Neurobio</p></td>
+</tr>
+<tr class="row-odd"><td><p>Instructor</p></td>
+<td><p>Richard Born</p></td>
+<td><p>Professor of Neurobiology</p></td>
+</tr>
+<tr class="row-even"><td><p>Teaching Assistant</p></td>
+<td><p>David Brann</p></td>
+<td><p>Program in Neuro PhD Student</p></td>
+</tr>
+<tr class="row-odd"><td><p>Teaching Assistant</p></td>
+<td><p>Jonah Pearl</p></td>
+<td><p>Program in Neuro PhD Student</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="components-of-course">
+<h1>Components of course<a class="headerlink" href="#components-of-course" title="Permalink to this headline">¶</a></h1>
+<p><em>Videos</em>: We will release videos and corresponding text introducing core concepts for you to watch on your own before class (no more than 1.5 hours of videos per class). Note these are new based on last minute switch to online learning (to reduce time spent on zoom)</p>
+<p><em>Live sessions</em>: During live sessions on zoom (which occur every other day), we will recap video content, go through examples, and work in small groups through problems.</p>
+<p><em>Homework</em>: There will be homework to complete between live sessions. You may collaborate with other students on homework but must submit your own.</p>
+<p><em>Homework help sessions</em>: On days without live sessions, there will be optional homework help sessions/office hours with instructors and TAs.</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="dates-content">
 <h1>Dates &amp; content*<a class="headerlink" href="#dates-content" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p>Content subject to change based on course progress.</p></li>
-</ul>
+<p>* Content subject to change</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Date</p></th>
+<th class="head"><p>Times</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Monday, 1/10</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Introduction I (structure of Python, variables, operators, numpy arrays, indexing)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuesday, 1/11</p></td>
+<td><p>3 - 5 pm</p></td>
+<td><p>Homework help session (optional)</p></td>
+</tr>
+<tr class="row-even"><td><p>Wednesday, 1/12</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Introduction II (array broadcasting, for/while loops, if statements, simulations)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuesday, 1/13</p></td>
+<td><p>3 - 5 pm</p></td>
+<td><p>Homework help session (optional)</p></td>
+</tr>
+<tr class="row-even"><td><p>Friday, 1/14</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Introduction III (functions, data structures)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuesday, 1/18</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Coding statistics (coding simulations/bootstrapping, p-values, t-tests)</p></td>
+</tr>
+<tr class="row-even"><td><p>Wednesday, 1/19</p></td>
+<td><p>3 - 5 pm</p></td>
+<td><p>Homework help session (optional)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thursday, 1/20</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Coding image processing</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="prerequisites">
 <h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h1>
 <p>None! This is designed as an introduction to coding and introduction to Python. While the homeworks center around biological contexts, no biological knowledge is assumed.</p>
+<p>Some students will have more prior coding knowledge - we will try to have these students work with each other so they can advance more quickly and try more advanced optional exercises.</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="grading">
 <h1>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">¶</a></h1>
-<p>This class is graded pass/fail. In order to pass, we expect you to atted the five full-day sessions, participate in the in-class exercises, and complete the compulsory part of the homework assignments.</p>
+<p>This class is graded pass/fail. In order to pass, we expect you to attend the five full-day sessions, participate in the in-class exercises, and complete the compulsory part of the homework assignments.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "QMBC-Python/QMBC-Python.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the course site for Quantitative Methods for Biologists (Neurobio 323QC), also known as Quantitative Methods Bootcamp or Python Bootcamp!</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="course-description">
+<h1>Course description<a class="headerlink" href="#course-description" title="Permalink to this headline">¶</a></h1>
+<p>The goal of this bootcamp is to introduce you to programming in Python and to show you the power this provides for analyzing data and for gaining intuition about the behavior of complex systems through the use of numerical simulations. Some of you, upon encountering in the previous sentence words like “programming” and “numerical simulations,” will feel the cold hand of fear grip your stomach, because you have never done any programming and, in fact, have tried to avoid math as much as possible. If so, YOU ARE PRECISELY THE PERSON WE HAD IN MIND as we were planning the course. We are aiming to help you break through this barrier of darkness and fear into the radiant sunshine of quantitative enlightenment. The true beauty of Python, as we will personally demonstrate, is that it allows people who are not mathematically adept (e.g. some of the instructors of this course) to use powerful numerical methods and visualization tools to gain an understanding of concepts that are very difficult to grasp analytically.</p>
+<p>This course is based heavily on the Matlab version, pioneered by Mike Springer and Richard Born: https://springerlab.org/qmbc/.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="instructors-teaching-assistants">
+<h1>Instructors &amp; Teaching Assistants<a class="headerlink" href="#instructors-teaching-assistants" title="Permalink to this headline">¶</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Role</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Instructor</p></td>
+<td><p>Eleanor Batty</p></td>
+<td><p>Associate Director of Computational Neuroscience, Department of Neurobio</p></td>
+</tr>
+<tr class="row-odd"><td><p>Instructor</p></td>
+<td><p>Richard Born</p></td>
+<td><p>Professor of Neurobiology</p></td>
+</tr>
+<tr class="row-even"><td><p>Teaching Assistant</p></td>
+<td><p>David Brann</p></td>
+<td><p>Program in Neuro PhD Student</p></td>
+</tr>
+<tr class="row-odd"><td><p>Teaching Assistant</p></td>
+<td><p>Jonah Pearl</p></td>
+<td><p>Program in Neuro PhD Student</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="components-of-course">
+<h1>Components of course<a class="headerlink" href="#components-of-course" title="Permalink to this headline">¶</a></h1>
+<p><em>Videos</em>: We will release videos and corresponding text introducing core concepts for you to watch on your own before class (no more than 1.5 hours of videos per class). Note these are new based on last minute switch to online learning (to reduce time spent on zoom)</p>
+<p><em>Live sessions</em>: During live sessions on zoom (which occur every other day), we will recap video content, go through examples, and work in small groups through problems.</p>
+<p><em>Homework</em>: There will be homework to complete between live sessions. You may collaborate with other students on homework but must submit your own.</p>
+<p><em>Homework help sessions</em>: On days without live sessions, there will be optional homework help sessions/office hours with instructors and TAs.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="dates-content">
+<h1>Dates &amp; content*<a class="headerlink" href="#dates-content" title="Permalink to this headline">¶</a></h1>
+<p>* Content subject to change</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Date</p></th>
+<th class="head"><p>Times</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Monday, 1/10</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Introduction I (structure of Python, variables, operators, numpy arrays, indexing)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuesday, 1/11</p></td>
+<td><p>3 - 5 pm</p></td>
+<td><p>Homework help session (optional)</p></td>
+</tr>
+<tr class="row-even"><td><p>Wednesday, 1/12</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Introduction II (array broadcasting, for/while loops, if statements, simulations)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuesday, 1/13</p></td>
+<td><p>3 - 5 pm</p></td>
+<td><p>Homework help session (optional)</p></td>
+</tr>
+<tr class="row-even"><td><p>Friday, 1/14</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Introduction III (functions, data structures)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Tuesday, 1/18</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Coding statistics (coding simulations/bootstrapping, p-values, t-tests)</p></td>
+</tr>
+<tr class="row-even"><td><p>Wednesday, 1/19</p></td>
+<td><p>3 - 5 pm</p></td>
+<td><p>Homework help session (optional)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thursday, 1/20</p></td>
+<td><p>10 am - 3 pm (with hour for lunch)</p></td>
+<td><p>Coding image processing</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="prerequisites">
+<h1>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h1>
+<p>None! This is designed as an introduction to coding and introduction to Python. While the homeworks center around biological contexts, no biological knowledge is assumed.</p>
+<p>Some students will have more prior coding knowledge - we will try to have these students work with each other so they can advance more quickly and try more advanced optional exercises.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="grading">
+<h1>Grading<a class="headerlink" href="#grading" title="Permalink to this headline">¶</a></h1>
+<p>This class is graded pass/fail. In order to pass, we expect you to attend the five full-day sessions, participate in the in-class exercises, and complete the compulsory part of the homework assignments.</p>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -250,20 +549,25 @@
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="content/intro1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Day 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By Ella Batty<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By Ella Batty<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
