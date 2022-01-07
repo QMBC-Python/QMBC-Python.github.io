@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 1 &#8212; Quantitative Methods for Biologists - Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Day 1" href="../content/intro1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Quantitative Methods for Biologists - Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Content
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/intro1.html">
+   Day 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Homework
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Homework 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/homeworks/HW_Day1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/homeworks/HW_Day1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Homework 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#section-1-fun-with-arrays">
+   Section 1: Fun with arrays
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#section-2-flow-cytometry">
+   Section 2: Flow Cytometry
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#part-1-load-the-data">
+     Part 1: Load the data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#part-2-visualizating-distributions-and-relationships-in-the-data">
+     Part 2: Visualizating distributions and relationships in the data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#part-3-segmenting-the-strains-and-comparing-their-gene-expression">
+     Part 3: Segmenting the strains and comparing their gene expression
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hints">
+     HINTS
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Homework 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Homework 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#section-1-fun-with-arrays">
+   Section 1: Fun with arrays
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#section-2-flow-cytometry">
+   Section 2: Flow Cytometry
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#part-1-load-the-data">
+     Part 1: Load the data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#part-2-visualizating-distributions-and-relationships-in-the-data">
+     Part 2: Visualizating distributions and relationships in the data
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#part-3-segmenting-the-strains-and-comparing-their-gene-expression">
+     Part 3: Segmenting the strains and comparing their gene expression
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hints">
+     HINTS
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/homeworks/HW_Day1.ipynb" target="_parent"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="homework-1">
+<h1>Homework 1<a class="headerlink" href="#homework-1" title="Permalink to this headline">¶</a></h1>
+<p>Quantitative Methods for Biologists (Python),
+J-term 2022</p>
+<p>Materials originally in Matlab by Rick Born &amp; Mike Springer, adapted to Python by Ella Batty January 2022</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="section-1-fun-with-arrays">
+<h1>Section 1: Fun with arrays<a class="headerlink" href="#section-1-fun-with-arrays" title="Permalink to this headline">¶</a></h1>
+<p><strong>Problem 1:</strong> Make an array with the following values by directly entering it and store it in <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-c65bb2f2-1981-4cdb-a76c-e9e33c8ce47b">
+<span class="eqno">(1)<a class="headerlink" href="#equation-c65bb2f2-1981-4cdb-a76c-e9e33c8ce47b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+x = \begin{bmatrix} 3 &amp; 4 &amp; 5 \\ 2 &amp; 1 &amp; 2 \\ 3 &amp; 2 &amp; 1 \\ 2 &amp; 3 &amp; 1 \\ \end{bmatrix}
+\end{align}\]</div>
+<p><strong>Problem 2:</strong> Do the following:</p>
+<ol class="simple">
+<li><p>Using code, calculate the shape of  array <code class="docutils literal notranslate"><span class="pre">x</span></code> from problem 1. (<em>LC #1</em>) What is the shape of <code class="docutils literal notranslate"><span class="pre">x</span></code>?</p></li>
+<li><p>Retrieve the value from the 3rd row 2nd column of <code class="docutils literal notranslate"><span class="pre">x</span></code>. (<em>LC #2</em>: submit the code for this)</p></li>
+<li><p>Make a new array <code class="docutils literal notranslate"><span class="pre">y</span></code> with two copies of x side by side</p></li>
+<li><p>Make a new array <code class="docutils literal notranslate"><span class="pre">y</span></code> with two copies of x one on top of the other</p></li>
+</ol>
+<p><strong>Problem 3:</strong> For these, assume the <code class="docutils literal notranslate"><span class="pre">x</span></code> array from problem 1 and think it through without trying any code.  What will these do?</p>
+<ol class="simple">
+<li><p>(<em>LC #3</em>) <code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">0]</span> <span class="pre">=</span> <span class="pre">x[:,</span> <span class="pre">1]</span></code></p></li>
+<li><p>(<em>LC #4</em>) <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">=</span> <span class="pre">np.concatenate((x,</span> <span class="pre">3),</span> <span class="pre">axis</span> <span class="pre">=</span> <span class="pre">0)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span>&#160; <span class="pre">*</span> <span class="pre">(1</span> <span class="pre">/</span> <span class="pre">x)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">2*x</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[3,</span> <span class="pre">0]</span> <span class="pre">=</span> <span class="pre">x[2,</span> <span class="pre">2]</span></code></p></li>
+</ol>
+<p><strong>Problem 4:</strong> For these, assume the <code class="docutils literal notranslate"><span class="pre">x</span></code> array from problem 1 and think it through without trying any code, at least first. What will these return?</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x[1,</span> <span class="pre">5]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">2]</span></code></p></li>
+<li><p>(<em>LC #5</em>) <code class="docutils literal notranslate"><span class="pre">x[[2,</span> <span class="pre">3,</span> <span class="pre">1],</span> <span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2]]</span></code></p></li>
+<li><p>(<em>LC #6</em>) <code class="docutils literal notranslate"><span class="pre">x[-1,</span> <span class="pre">-1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">::2]</span></code></p></li>
+<li><p>(<em>LC #7</em>) <code class="docutils literal notranslate"><span class="pre">x[x</span> <span class="pre">&gt;</span> <span class="pre">2]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">np.arange(0,</span> <span class="pre">8,</span> <span class="pre">2)</span></code></p></li>
+</ol>
+<p><strong>Problem 5:</strong> (<em>LC #8</em>)</p>
+<p>Start by typing <code class="docutils literal notranslate"><span class="pre">t</span> <span class="pre">=</span> <span class="pre">np.arange(0,</span> <span class="pre">100)</span> <span class="pre">*</span> <span class="pre">np.pi/25</span></code></p>
+<p>Now do the following:</p>
+<ol class="simple">
+<li><p>Plot sin(t) on the y axis and <code class="docutils literal notranslate"><span class="pre">t</span></code> on the x axis.</p></li>
+<li><p>Add to this plot (i.e. don’t overwrite it) cos(t) on the y axis in red circles.</p></li>
+<li><p>Now add tan(t) in green and make the line width equal to 2.</p></li>
+<li><p>Plot a green line going from the point (0,0) to the point (20, 10)</p></li>
+</ol>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="section-2-flow-cytometry">
+<h1>Section 2: Flow Cytometry<a class="headerlink" href="#section-2-flow-cytometry" title="Permalink to this headline">¶</a></h1>
+<p><strong>Background</strong>: We are interested in better understanding how cells respond to nutrients in their environment.  One way to do this is to compare the response of related strains and, when the responses are different, to use genetics to identify the traits responsible for these differences.</p>
+<p>In this example, we are comparing two wild type isolates of yeast from different parts of the world.  We are interested in comparing how the different isolates induce a metabolic gene in response to galactose.  In order to do so, we have cells that constitutively express either a red fluorescent protein (<strong>mCherry</strong>) or a blue fluorescent protein (<strong>BFP</strong>). In addition, each strain has a yellow fluorescent protein (<strong>YFP</strong>) promoter reporter for the first gene in the galactose catabolic pathway (see figure).  To compare the response of each strain, we inoculate at very low cell densities the mCherry and BFP strains in a flask.  Ater 8 hours, we take a sample of the culture to assay.</p>
+<p>Flow cytometry is a technique that can quickly measure the total fluorescence of a large number of cells one cell at a time.  Flow cytometry has the disadvantage that the signal to noise is often lower than microscopy and a single cell cannot be followed over time; instead one measures changes in a population of cells.  Flow cytometry works by quickly passing a narrow stream of liquire containing the cells through a flow cell. Special focusing techniques ensure that only a single cell is measured at a time.  Multiple lasers and filters are then able to detect a large number of fluorophores (fluorescent compounds) in a cell. Each distinct laser and filter combination is referred to as a channel (e.g. GFP or mCherry). Additionally, other features such as the amount of scattered light, side scatter (SSC) and forward scatter (FSC), are detected. Both SSC and FSC give information on the size of the cells but both measurements are influenced by multiple variables besides size.</p>
+<div class="section" id="part-1-load-the-data">
+<h2>Part 1: Load the data<a class="headerlink" href="#part-1-load-the-data" title="Permalink to this headline">¶</a></h2>
+<p>The data from this experiment is in a file called <code class="docutils literal notranslate"><span class="pre">facs_data.npy</span></code>.</p>
+<p>The next cell automatically downloads the data and loads it in directly (should work in either Google Colab or jupyter notebook locally). Loading in data that exists locally (if you are using a jupyter notebook for example) isn’t as complicated.  If you’d like to download the data locally, you can get it from https://osf.io/y2hck/?show=view.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/y2hck/download&#39;</span><span class="p">)</span>
+<span class="n">facs_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>  
+
+<span class="n">facs_data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(10000, 6)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data is an array with raw data where every row is a different cell measured in the assay and each column represents either a measured fluorescence for a specific channel (columns 2 - 4) or the forward scatter and side scatter (columns 5 and 6). Column 1 contains the time where the cell was measured.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column 1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>6</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Time</p></td>
+<td><p>YFP</p></td>
+<td><p>BFP</p></td>
+<td><p>mCherry</p></td>
+<td><p>FSC (Forward Scatter)</p></td>
+<td><p>SSC (Side scatter)</p></td>
+</tr>
+</tbody>
+</table>
+<p>Before starting any of the exercises below, make a comprehensive list of all the steps that you will need to quantitatively compare the gene expression in the two strains. Think about the types of visualizations and quantifications that you need to answer this question. <strong>Don’t just think about it, write out this list!</strong>. Now try to implement it (Check out the hinst or go on to Part 2 and Part 3 for more guidance).</p>
+</div>
+<div class="section" id="part-2-visualizating-distributions-and-relationships-in-the-data">
+<h2>Part 2: Visualizating distributions and relationships in the data<a class="headerlink" href="#part-2-visualizating-distributions-and-relationships-in-the-data" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>How would you visualize each channel (column) in the experiment? Data often needs to be mathematically transformed in order to be more clearly understood. In this case, we will log transform the data. <strong>Don’t forget to log transform the data</strong>. Make a histogram of the log10 values of each channel in the experiment. What can you tell about the distributions of each channel? Are they unimodal, bimodal? Keep in mind that column 1 contains time information so you can skip that histogram.</p></li>
+<li><p>We use scatter plots to visualize relationships between variables.  What can you tell about the relationships between channels? More specifically, what can you tell about the relationship between the BFP and the mCherry channel? What causes the slope in the BFP versus mCherry plot? How can you verify this?</p></li>
+<li><p>How can we use the mCherry and BFP values to segment between the red and blue cells? <strong>Hint available</strong></p></li>
+</ol>
+<p><strong>Hint</strong>: look at our proposed work flow (under HINTS below) if you need exra help.</p>
+</div>
+<div class="section" id="part-3-segmenting-the-strains-and-comparing-their-gene-expression">
+<h2>Part 3: Segmenting the strains and comparing their gene expression<a class="headerlink" href="#part-3-segmenting-the-strains-and-comparing-their-gene-expression" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>After picking the most appropriate threshold for the segmentation.  Visualize your segmentation by plotting the blue and red cells in diferent colors. What sort of plots might be useful for this?</p></li>
+<li><p>Now plot the YFP channel values for each segmented strain. What sort of plots might help you compare the strains? Are blue cells inducing the galactose metabolic genes (tagged in YFP) in the same manner? How similar or different are they? Is there anything special about the blue cells</p></li>
+<li><p>What are the different ways that you can use to quantify the YFP levels? Try some.</p></li>
+<li><p>Try segmenting the BFP cells into on and off cells and compare all three groups (mCherry, BFP on and BFP off). Do the on cells have different sizes compared to non-inducing cells?</p></li>
+</ol>
+</div>
+<div class="section" id="hints">
+<h2>HINTS<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h2>
+<p>Hint Part 2</p>
+<p>This is the proposed workflow for the analysis.</p>
+<p>Visualize:</p>
+<ol class="simple">
+<li><p>Compare histogram versus scatter plots of each channel.</p></li>
+<li><p>Observe distributions of each channel and compare relationships between channels.</p></li>
+<li><p>Make other scatter plots: fluorescence versus time. Check that the fluorescence is even throughout the run.</p></li>
+</ol>
+<p>Segment:</p>
+<ol class="simple">
+<li><p>Pick a threshold value to distinguish between strains.</p></li>
+<li><p>Compare using the mCherry or BFP channels normalized by size FSC or SSC.</p></li>
+<li><p>Use logical statements to extract rows above a certain threshold.</p></li>
+<li><p>Extract the YFP values for each strain.</p></li>
+</ol>
+<p>Quantify:</p>
+<ol class="simple">
+<li><p>Look at the YFP distribution for each channel.</p></li>
+<li><p>Compare the shapes of the distributions.</p></li>
+<li><p>Extract statistics of the distributions: mean, medians, standard deviations, and coefficients of variation.</p></li>
+<li><p>Test whether the distributions are statistically different.</p></li>
+</ol>
+<p><strong>Hint part 2, question 3</strong></p>
+<p>Plot BFP vs SSC, and BFP vs FSC. Do the same for mCherry. Can you better distinguish between the two strains. Since the FSC and SSC values have information about the size of the cells, you can roughly normalize the BFP values by the cell size, e.g. BFP/SSC. Make a histogram of BFP/SSC. Compare the histogram of BFP/FSC.</p>
+<p>What threshold value gives you the most accurate distribution between blue and red cells? Note that there is not a single response and multiple answers are correct.</p>
+<p><strong>Hint part 3</strong> For question 1, make scatter plots with the segmented populations using different colors.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "QMBC-Python/QMBC-Python.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./homeworks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../content/intro1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Day 1</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ella Batty<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
