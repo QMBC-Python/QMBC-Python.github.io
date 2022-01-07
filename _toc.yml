@@ -6,4 +6,5 @@ parts:
       - file: content/intro1.md
   - caption: Homework
     chapters:
-      - file: homeworks/homework1.md
+      - file: homeworks/HW_Day1.ipynb
+      - file: HW_Day1_Solutions.md
