@@ -4,6 +4,8 @@ parts:
   - caption: Content
     chapters:
       - file: content/intro1.md
+        sections:
+          - file: content/Variables.ipynb
   - caption: Homework
     chapters:
       - file: homeworks/HW_Day1.ipynb
