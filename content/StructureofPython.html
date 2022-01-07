@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Day 1 &#8212; Quantitative Methods for Biologists - Python</title>
+    <title>1.1 - Structure of Python &#8212; Quantitative Methods for Biologists - Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -93,26 +93,19 @@
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Content
+  Day 1
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Day 1
+   1.1 - Structure of Python
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Variables.html">
-     1.2 - Variables
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Variables.html">
+   1.2 - Variables
+  </a>
  </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
@@ -172,9 +165,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/intro1.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/StructureofPython.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -192,6 +185,25 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/StructureofPython.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -204,7 +216,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Day 1</h1>
+                <h1>1.1 - Structure of Python</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -215,10 +227,33 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="day-1">
-<h1>Day 1<a class="headerlink" href="#day-1" title="Permalink to this headline">¶</a></h1>
-<p>Course notes &amp; videos for day 1</p>
-<div class="toctree-wrapper compound">
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/StructureofPython.ipynb" target="_parent"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="structure-of-python">
+<h1>1.1 - Structure of Python<a class="headerlink" href="#structure-of-python" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@markdown Video: Structure of Python</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">video</span> <span class="o">=</span> <span class="n">YouTubeVideo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;oST7A_4Ht6o&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">854</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Video available at https://youtube.com/watch?v=&quot;</span> <span class="o">+</span> <span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">video</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=oST7A_4Ht6o
+</pre></div>
+</div>
+<div class="output text_html">
+<iframe
+    width="854"
+    height="480"
+    src="https://www.youtube.com/embed/oST7A_4Ht6o?fs=1"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
 </div>
 </div>
 
