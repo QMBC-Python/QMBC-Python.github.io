@@ -6,6 +6,9 @@ parts:
     - file: content/StructureofPython.ipynb
     - file: content/Variables.ipynb
     - file: content/Operators.ipynb
+    - file: content/IntrotoArrays.ipynb
+    - file: content/Indexing.ipynb
+    - file: content/BasicPlotting.ipynb
   - caption: Homework
     chapters:
     - file: homeworks/HW_Day1.ipynb
