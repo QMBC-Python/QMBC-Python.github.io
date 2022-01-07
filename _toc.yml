@@ -3,9 +3,10 @@ root: intro
 parts:
   - caption: Content
     chapters:
-      - file: content/intro1.md
         sections:
+          - file: content/StructureofPython.ipynb
           - file: content/Variables.ipynb
+        - caption: Day 1
   - caption: Homework
     chapters:
       - file: homeworks/HW_Day1.ipynb
