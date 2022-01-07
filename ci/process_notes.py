@@ -96,16 +96,16 @@ def link_hidden_cells(content):
                 if "hide-input" not in cell['metadata']['tags']:
                     updated_cell['metadata']['tags'].append("hide-input")
 
-            # If header is lost, create one in markdown
-            if '@title' in source:
+#             # If header is lost, create one in markdown
+#             if '@title' in source:
 
-                if source.split('@title')[1] != '':
-                    header_cell = {
-                        'cell_type': 'markdown',
-                        'metadata': {},
-                        'source': ['#'*(header_level + 1) + ' ' + source.split('@title')[1]]}
-                    updated_cells.insert(i_updated_cell, header_cell)
-                    i_updated_cell += 1
+#                 if source.split('@title')[1] != '':
+#                     header_cell = {
+#                         'cell_type': 'markdown',
+#                         'metadata': {},
+#                         'source': ['#'*(header_level + 1) + ' ' + source.split('@title')[1]]}
+#                     updated_cells.insert(i_updated_cell, header_cell)
+#                     i_updated_cell += 1
 
             strings_with_markdown = [(i, string) for i, string in enumerate(cell['source']) if '@markdown' in string]
             if len(strings_with_markdown) == 1:
