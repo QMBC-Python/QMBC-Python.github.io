@@ -250,6 +250,40 @@
   <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Indexing.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
 <div class="tex2jax_ignore mathjax_ignore section" id="indexing">
 <h1>1.5 - Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h1>
+<p>Video: Indexing</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=xwvSBd-m6NA
+</pre></div>
+</div>
+<div class="output text_html">
+<iframe
+    width="730"
+    height="410"
+    src="https://www.youtube.com/embed/xwvSBd-m6NA?fs=1"
+    frameborder="0"
+    allowfullscreen
+
+></iframe>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Indexing single entries:</p>
+<p><code class="docutils literal notranslate"><span class="pre">x[row</span> <span class="pre">index,</span> <span class="pre">column</span> <span class="pre">index]</span></code></p>
+<p>Indexing a whole row:</p>
+<p><code class="docutils literal notranslate"><span class="pre">x[row</span> <span class="pre">index,</span> <span class="pre">:]</span></code></p>
+<p>Indexing a whole column:</p>
+<p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">column</span> <span class="pre">index]</span></code></p>
+<p>Indexing some columns of one row:</p>
+<p><code class="docutils literal notranslate"><span class="pre">[row</span> <span class="pre">index,</span> <span class="pre">start</span> <span class="pre">index:stop</span> <span class="pre">index]</span></code></p>
+<p>Not inclusive of stop index</p>
 </div>
 
     <script type="text/x-thebe-config">
