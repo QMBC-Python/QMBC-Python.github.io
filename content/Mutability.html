@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.5 - Indexing &#8212; Quantitative Methods for Biologists - Python</title>
+    <title>2.4 - Mutability &#8212; Quantitative Methods for Biologists - Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.6 - Plotting" href="Plotting.html" />
-    <link rel="prev" title="1.4 - Intro to Arrays" href="IntrotoArrays.html" />
+    <link rel="next" title="Homework 1" href="../homeworks/HW_Day1.html" />
+    <link rel="prev" title="2.3 - Objects" href="Objects.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -96,7 +96,7 @@
   Day 1
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="StructureofPython.html">
    1.1 - Structure of Python
@@ -117,8 +117,8 @@
    1.4 - Intro to Arrays
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Indexing.html">
    1.5 - Indexing
   </a>
  </li>
@@ -138,7 +138,7 @@
   Day 2
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="IfStatements.html">
    2.1: If statements
@@ -154,8 +154,8 @@
    2.3 - Objects
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Mutability.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    2.4 - Mutability
   </a>
  </li>
@@ -217,7 +217,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/Indexing.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/Mutability.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -244,7 +244,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Indexing.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Mutability.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -268,7 +268,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>1.5 - Indexing</h1>
+                <h1>2.4 - Mutability</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -279,43 +279,34 @@
             
               <div>
                 
-  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Indexing.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="indexing">
-<h1>1.5 - Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h1>
-<p>Video: Indexing</p>
-<div class="cell tag_remove-input docutils container">
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Mutability.ipynb" target="_parent"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="mutability">
+<h1>2.4 - Mutability<a class="headerlink" href="#mutability" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@markdown Video: Mutability</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">video</span> <span class="o">=</span> <span class="n">YouTubeVideo</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">854</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Video available at https://youtube.com/watch?v=&quot;</span> <span class="o">+</span> <span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="p">)</span>
+<span class="n">video</span>
+</pre></div>
+</div>
+</div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=xwvSBd-m6NA
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=
 </pre></div>
 </div>
 <div class="output text_html">
 <iframe
-    width="730"
-    height="410"
-    src="https://www.youtube.com/embed/xwvSBd-m6NA?fs=1"
+    width="854"
+    height="480"
+    src="https://www.youtube.com/embed/?fs=1"
     frameborder="0"
     allowfullscreen
 
 ></iframe>
 </div></div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">]])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Indexing single entries:</p>
-<p><code class="docutils literal notranslate"><span class="pre">x[row</span> <span class="pre">index,</span> <span class="pre">column</span> <span class="pre">index]</span></code></p>
-<p>Indexing a whole row:</p>
-<p><code class="docutils literal notranslate"><span class="pre">x[row</span> <span class="pre">index,</span> <span class="pre">:]</span></code></p>
-<p>Indexing a whole column:</p>
-<p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">column</span> <span class="pre">index]</span></code></p>
-<p>Indexing some columns of one row:</p>
-<p><code class="docutils literal notranslate"><span class="pre">[row</span> <span class="pre">index,</span> <span class="pre">start</span> <span class="pre">index:stop</span> <span class="pre">index]</span></code></p>
-<p>Not inclusive of stop index</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -343,17 +334,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="IntrotoArrays.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Objects.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">1.4 - Intro to Arrays</p>
+            <p class="prev-next-title">2.3 - Objects</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Plotting.html" title="next page">
+    <a class='right-next' id="next-link" href="../homeworks/HW_Day1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1.6 - Plotting</p>
+        <p class="prev-next-title">Homework 1</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
