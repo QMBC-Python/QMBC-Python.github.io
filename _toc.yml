@@ -10,6 +10,12 @@ parts:
     - file: content/Indexing.ipynb
     - file: content/Plotting.ipynb
     - file: content/Day1_InClass.ipynb
+  - caption: Day 2
+    chapters:
+    - file: content/IfStatements.ipynb
+    - file: content/ForLoops.ipynb
+    - file: content/Objects.ipynb
+    - file: content/Mutability.ipynb
   - caption: Homework
     chapters:
     - file: homeworks/HW_Day1.ipynb
