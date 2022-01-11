@@ -9,6 +9,7 @@ parts:
     - file: content/IntrotoArrays.ipynb
     - file: content/Indexing.ipynb
     - file: content/Plotting.ipynb
+    - file: content/Day1_InClassSlides.ipynb
     - file: content/Day1_InClass.ipynb
   - caption: Day 2
     chapters:
