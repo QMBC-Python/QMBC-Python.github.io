@@ -23,7 +23,8 @@ def main():
 
     # Process all notebooks
     for notebook_file_path in notebook_list:
-        pre_process_notebook(notebook_file_path)
+        if 'ipynb' in notebook_file_path:
+            pre_process_notebook(notebook_file_path)
 
 
 def pre_process_notebook(file_path):
