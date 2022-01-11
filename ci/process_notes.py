@@ -19,7 +19,7 @@ def main():
     notebook_list = []
     for i_part in range(len(materials['parts'])):
         for i_chapter in range(len(materials['parts'][i_part]['chapters'])):
-            notebook_list.append( materials['parts'][0]['chapters'][i_chapter]['file'])
+            notebook_list.append( materials['parts'][i_part]['chapters'][i_chapter]['file'])
 
     # Process all notebooks
     for notebook_file_path in notebook_list:
@@ -33,28 +33,9 @@ def pre_process_notebook(file_path):
     pre_processed_content = open_in_colab_new_tab(content)
     pre_processed_content = change_video_widths(pre_processed_content)
     pre_processed_content = link_hidden_cells(pre_processed_content)
-    pre_processed_content = make_stop_and_thinks(pre_processed_content)
 
     with open(file_path, "w", encoding="utf-8") as write_notebook:
         json.dump(pre_processed_content, write_notebook, indent=1, ensure_ascii=False)
-
-def make_stop_and_thinks(content):
-    cells = content['cells']
-    updated_cells = cells.copy()
-
-    i_updated_cell = 0
-    for i_cell, cell in enumerate(cells):
-        if cell['source'][0].startswith("**Stop and think!**"):
-            question = cell['source'][0]
-            for jj in range(1, len(cell['source'])):
-                    answer = ''.join(cell['source'][2:])
-
-            updated_cells[i_cell]['source'] = [f'```{{admonition}} {question}',
-                ':class: tip, dropdown\n',
-                f'{answer}']
-            
-    content['cells'] = updated_cells
-    return content
 
 def open_in_colab_new_tab(content):
     cells = content['cells']
