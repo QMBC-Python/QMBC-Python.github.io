@@ -1,4 +1,4 @@
-# Homework 1 Solutions
+# Homework 2 Solutions
 
 Link to Colab solutions: https://colab.research.google.com/drive/1kCp-UDLByEJhmuDYh2AYZwBUa1ANANYZ?usp=sharing
 
