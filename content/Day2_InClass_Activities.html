@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.2 - For Loops &#8212; Quantitative Methods for Biologists - Python</title>
+    <title>2 - In-class activities &#8212; Quantitative Methods for Biologists - Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.3 - Objects" href="Objects.html" />
-    <link rel="prev" title="2.1 - If statements" href="IfStatements.html" />
+    <link rel="next" title="Homework 1" href="../homeworks/HW_Day1.html" />
+    <link rel="prev" title="2.3 - Objects" href="Objects.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -151,8 +151,8 @@
    2.1 - If statements
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ForLoops.html">
    2.2 - For Loops
   </a>
  </li>
@@ -161,8 +161,8 @@
    2.3 - Objects
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Day2_InClass_Activities.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    2 - In-class activities
   </a>
  </li>
@@ -224,7 +224,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/ForLoops.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/Day2_InClass_Activities.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -251,7 +251,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/ForLoops.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Day2_InClass_Activities.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -274,18 +274,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video">
-   Video
+  <a class="reference internal nav-link" href="#for-loops-if-statements-self-paced-practice">
+   For loops &amp; if statements self-paced practice
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slides">
-   Slides
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notes">
-   Notes
+  <a class="reference internal nav-link" href="#plotting-cell-analysis-self-paced">
+   Plotting cell analysis (self-paced)
   </a>
  </li>
 </ul>
@@ -298,7 +293,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>2.2 - For Loops</h1>
+                <h1>2 - In-class activities</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -309,18 +304,13 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video">
-   Video
+  <a class="reference internal nav-link" href="#for-loops-if-statements-self-paced-practice">
+   For loops &amp; if statements self-paced practice
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slides">
-   Slides
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notes">
-   Notes
+  <a class="reference internal nav-link" href="#plotting-cell-analysis-self-paced">
+   Plotting cell analysis (self-paced)
   </a>
  </li>
 </ul>
@@ -332,140 +322,120 @@
             
               <div>
                 
-  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/ForLoops.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="for-loops">
-<h1>2.2 - For Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="video">
-<h2>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h2>
-<p>Video: For loops</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=DJ3CmoerNWE
-</pre></div>
-</div>
-<div class="output text_html">
-<iframe
-    width="730"
-    height="410"
-    src="https://www.youtube.com/embed/DJ3CmoerNWE?fs=1"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
-</div>
-</div>
-<div class="section" id="slides">
-<h2>Slides<a class="headerlink" href="#slides" title="Permalink to this headline">¶</a></h2>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "fb72c2bda46142baac52c2433dddfb38"}
-</script></div>
-</div>
-</div>
-<div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Day2_InClass_Activities.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="in-class-activities">
+<h1>2 - In-class activities<a class="headerlink" href="#in-class-activities" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="section" id="for-loops-if-statements-self-paced-practice">
+<h2>For loops &amp; if statements self-paced practice<a class="headerlink" href="#for-loops-if-statements-self-paced-practice" title="Permalink to this headline">¶</a></h2>
+<p><strong>Problem 1:</strong> Write code that uses variable <code class="docutils literal notranslate"><span class="pre">n</span></code> representing a number and outputs the following:</p>
+<p>If the number is a multiple of 3, print Fizz</p>
+<p>If the number is a multiple of 5, print Buzz</p>
+<p>If the number is a multiple of both 3 and 5, print FizzBuzz</p>
+<p>Otherwise, print the number</p>
+<p>For example, n = 15 should lead to ‘Fizzbuzz’, n = 4 should lead to 4, and n = 5 should lead to ‘Buzz’.</p>
+<p>Enter your code on learning catalytics.</p>
+<p><strong>Problem 2</strong></p>
+<p>Without running the code, what would <code class="docutils literal notranslate"><span class="pre">count</span></code> equal after running this code?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i_m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">i_m</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">elif</span> <span class="n">i_m</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">-=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Problem 3</strong></p>
+<p>Without running the code, what would <code class="docutils literal notranslate"><span class="pre">count</span></code> equal after running this code?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i_m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">i_m</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i_m</span> <span class="o">!=</span> <span class="mi">18</span><span class="p">:</span>
+      <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i_m</span> <span class="o">==</span> <span class="mi">19</span><span class="p">:</span>
+      <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">elif</span> <span class="n">i_m</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">-=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Problem 4:</strong> Make an array with 10 rows, 15 columns, and 5 pages (3rd dimension).</p>
+<p>If the row is greater than the column, make the value equal to the page.</p>
+<p>Otherwise, if on the second page make the value equal to the row position, unless you are on the diagonal (and the second page)  in which case make the value equal to -5.</p>
+<p>Finally, if no other condition is met, make the value equal to the column position.</p>
+<p>Enter your code on learning catalytics.</p>
+<p><strong>(Optional, advanced) Problem 5:</strong> Finding number with a factor of 7</p>
+<p>Print the first number higher than 35 that has 7 as a factor. Please use a while loop to do so.</p>
+<p>If stuck, double click on the cell below to access hints.</p>
+<p>Hints</p>
+<div class="cell tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hints</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">If stuck, break it into little steps:</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">all_x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
-15
-16
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">all_x</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
-15
-16
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">all_x</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-13
-1
-15
-2
-16
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">13</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">all_x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
-15
-16
-20
-21
-25
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-2
-4
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<span class="sd">1) How do you check if a number has a factor of 7?</span>
 
+<span class="sd">2) Set up while loop with a variable at 35 that increases by one at each loop</span>
 
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"36ab5d6503d6461fb29cf7c1f7f44f29": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "fb72c2bda46142baac52c2433dddfb38": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_36ab5d6503d6461fb29cf7c1f7f44f29", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7f830c470d50>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.osf.io/render?url=https://osf.io/2z9ra/?direct%26mode=render%26action=download%26mode=rende\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}}, "version_major": 2, "version_minor": 0}
-</script>
+<span class="sd">3) Make a condition that is True when the variable from part 2 is not divisible by 7, False if it is</span>
 
+<span class="sd">4) Are you sure you&#39;re printing the correct number, not one higher than you want?</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>(Optional, advanced) Problem 6: Fibonacci Sequence:</strong></p>
+<p>Write code to print a numpy array containing the Fibonacci sequence of length given by variable <code class="docutils literal notranslate"><span class="pre">num</span></code>.</p>
+<p>The Fibonacci sequence starts with 0, 1, and after that each entry is the sum of the two prior, so</p>
+<p>0, 1, 1, 2, 3, 5, 8, etc</p>
+<p>Note: there are fancy ways to do this with recursion but we’re not looking for that</p>
+<p>Examples:</p>
+<p>If num is 2, you should print the numpy array [0, 1].</p>
+<p>If num is 4, you should print the numpy array [0, 1, 1, 2].</p>
+</div>
+<div class="section" id="plotting-cell-analysis-self-paced">
+<h2>Plotting cell analysis (self-paced)<a class="headerlink" href="#plotting-cell-analysis-self-paced" title="Permalink to this headline">¶</a></h2>
+<p>Execute the following cell to load in the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/w5n64/download&#39;</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+
+<span class="n">double_grad_WT</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;double_grad_WT&#39;</span><span class="p">]</span>
+<span class="n">gal_label</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;gal_label&#39;</span><span class="p">]</span>
+<span class="n">glu_label</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;glu_label&#39;</span><span class="p">]</span>
+<span class="n">yfp_range</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;yfp_range&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Problem 1:</strong> The array <code class="docutils literal notranslate"><span class="pre">double_grad_WT</span></code> is shape (8, 12, 100). Each row and column corresponds to a different environment (well) in which cells were grown. Each environment had different sugar values for glucose and galactose. The <code class="docutils literal notranslate"><span class="pre">glu_label</span></code> and <code class="docutils literal notranslate"><span class="pre">gal_label</span></code> array contain the respective sugar values for each row or column. So, <code class="docutils literal notranslate"><span class="pre">glu_label</span></code> has 8 entries and <code class="docutils literal notranslate"><span class="pre">gal_label</span></code> has 12.</p>
+<p>Cells contain a YFP reporter which is activated by galactose and inhibited by glucose. We record the YFP expression from the population of cells in each environment.</p>
+<p>Each entry in the array is a y value of a histogram of YFP expression, where the third dimension corresponds to different amounts of YFP expression. The x values of the histogram for every cell is stored in the <code class="docutils literal notranslate"><span class="pre">yfp_range</span></code> array.</p>
+<p>Plot the data for row 3, column 6. (<code class="docutils literal notranslate"><span class="pre">yfprange</span></code> vs the data for that environment]</p>
+<p>Draw out the rough figure in LC</p>
+<p><strong>Problem 2</strong>: Plot all 96 pieces of data in a 8 by 12 grid. Try to make it look decent (not totally overlapping)</p>
+<p>Hint: you don’t need x tick and y tick labels on every plot - the x axis will be the same and it would be nice to have all subplots have the same y axis limits. Check out the sharex and sharey arguments of https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html.</p>
+<p>Enter your code in LC</p>
+<p><strong>Problem 3:</strong> Label the x axis of each subplot in the bottom row with the galactose values of that column. Label the y axis of each subplot in the leftmost column with the values of glucose values.</p>
+<p>Paste your code.</p>
+<p><strong>Problem 4:</strong> The yfp_range array contains the values of each bin of the histograms you plots. Write code that will calculate the mean value of the YFP expression per well. Remember that your data is the y values of a histogram so this is not simply computing the mean of that. Write the value as the title on each plot. Paste your code</p>
+<p><strong>Problem 5:</strong> Is there an relationship between expression level and the two inputs, glucose and galactose. Is there a better way to display and highlight that results? Try it and sketch your figure</p>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -492,17 +462,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="IfStatements.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Objects.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">2.1 - If statements</p>
+            <p class="prev-next-title">2.3 - Objects</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Objects.html" title="next page">
+    <a class='right-next' id="next-link" href="../homeworks/HW_Day1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2.3 - Objects</p>
+        <p class="prev-next-title">Homework 1</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
