@@ -21,3 +21,4 @@ parts:
     chapters:
     - file: homeworks/HW_Day1.ipynb
     - file: homeworks/HW_Day1_Solutions.md
+    - file: homeworks/HW_Day2.ipynb
