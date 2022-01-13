@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.3 - Operators &#8212; Quantitative Methods for Biologists - Python</title>
+    <title>3.2 - Functions &#8212; Quantitative Methods for Biologists - Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.4 - Intro to Arrays" href="IntrotoArrays.html" />
-    <link rel="prev" title="1.2 - Variables" href="Variables.html" />
+    <link rel="next" title="3.3 - Lists" href="Lists.html" />
+    <link rel="prev" title="3.1 - Tuples" href="Tuples.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,7 +98,7 @@
   Day 1
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="StructureofPython.html">
    1.1 - Structure of Python
@@ -109,8 +109,8 @@
    1.2 - Variables
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Operators.html">
    1.3 - Operators
   </a>
  </li>
@@ -172,14 +172,14 @@
   Day 3
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Tuples.html">
    3.1 - Tuples
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Functions.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    3.2 - Functions
   </a>
  </li>
@@ -266,7 +266,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/Operators.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/Functions.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -293,7 +293,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Operators.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Functions.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -316,18 +316,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#arithmetic-operators">
-   Arithmetic operators
+  <a class="reference internal nav-link" href="#multiple-inputs-outputs">
+   Multiple inputs/outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comparison-operators">
-   Comparison operators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#logical-operators">
-   Logical operators
+  <a class="reference internal nav-link" href="#keyword-vs-position-arguments">
+   Keyword vs position arguments
   </a>
  </li>
 </ul>
@@ -340,7 +335,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>1.3 - Operators</h1>
+                <h1>3.2 - Functions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -351,18 +346,13 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#arithmetic-operators">
-   Arithmetic operators
+  <a class="reference internal nav-link" href="#multiple-inputs-outputs">
+   Multiple inputs/outputs
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#comparison-operators">
-   Comparison operators
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#logical-operators">
-   Logical operators
+  <a class="reference internal nav-link" href="#keyword-vs-position-arguments">
+   Keyword vs position arguments
   </a>
  </li>
 </ul>
@@ -374,405 +364,262 @@
             
               <div>
                 
-  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Operators.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="operators">
-<h1>1.3 - Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h1>
-<p>Video: Operators</p>
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Functions.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="functions">
+<h1>3.2 - Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Video: Tuples</p>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=kUkFutvEhfM
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=XmE4ovQcSKU
 </pre></div>
 </div>
 <div class="output text_html">
 <iframe
     width="730"
     height="410"
-    src="https://www.youtube.com/embed/kUkFutvEhfM?fs=1"
+    src="https://www.youtube.com/embed/XmE4ovQcSKU?fs=1"
     frameborder="0"
     allowfullscreen
 
 ></iframe>
 </div></div>
 </div>
-<div class="section" id="arithmetic-operators">
-<h2>Arithmetic operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Symbol</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>+</p></td>
-<td><p>Addition</p></td>
-</tr>
-<tr class="row-odd"><td><p>-</p></td>
-<td><p>Subtraction</p></td>
-</tr>
-<tr class="row-even"><td><p>*</p></td>
-<td><p>Multiplication</p></td>
-</tr>
-<tr class="row-odd"><td><p>/</p></td>
-<td><p>Division</p></td>
-</tr>
-<tr class="row-even"><td><p>//</p></td>
-<td><p>Integer division</p></td>
-</tr>
-<tr class="row-odd"><td><p>%</p></td>
-<td><p>Modulus operator</p></td>
-</tr>
-</tbody>
-</table>
+<p>Reusable piece of code that performs some computation on inputs and returns outputs</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">+</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">-</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">*</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">/</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.5
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sum_value</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="n">x</span> <span class="o">/</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_value</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.6666666666666667
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.9455456315402984
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-2.7657703761126924
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-</div>
-</div>
-<p>PEMDAS:</p>
-<p>Parantheses first</p>
-<p>Exponents</p>
-<p>Multiplication/division</p>
-<p>Addition/subtraction</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">5</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.6666666666666665
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="comparison-operators">
-<h2>Comparison operators<a class="headerlink" href="#comparison-operators" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Symbol</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>&gt;</p></td>
-<td><p>Greater than</p></td>
-</tr>
-<tr class="row-odd"><td><p>&gt;=</p></td>
-<td><p>Greater than or equal to</p></td>
-</tr>
-<tr class="row-even"><td><p>&lt;</p></td>
-<td><p>Less than</p></td>
-</tr>
-<tr class="row-odd"><td><p>&lt;=</p></td>
-<td><p>Division</p></td>
-</tr>
-<tr class="row-even"><td><p>==</p></td>
-<td><p>Equal to</p></td>
-</tr>
-<tr class="row-odd"><td><p>!=</p></td>
-<td><p>Not equal to</p></td>
-</tr>
-</tbody>
-</table>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="mi">7</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_it_hot</span><span class="p">(</span><span class="n">temperature</span><span class="p">):</span>
 
-<span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bool
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">&gt;=</span> <span class="mi">7</span>
-<span class="mi">5</span> <span class="o">&lt;</span> <span class="mi">7</span>
-<span class="mi">5</span> <span class="o">&lt;=</span> <span class="mi">7</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">==</span> <span class="mi">7</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">==</span> <span class="mf">7.0</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">7</span> <span class="o">!=</span> <span class="mi">7</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hello&#39;</span> <span class="o">==</span> <span class="s1">&#39;hi&#39;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="logical-operators">
-<h2>Logical operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Symbol</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>and</p></td>
-<td><p>True if both sides are true, otherwise false</p></td>
-</tr>
-<tr class="row-odd"><td><p>or</p></td>
-<td><p>True if both or either side is true</p></td>
-</tr>
-<tr class="row-even"><td><p>not</p></td>
-<td><p>True if value is False, False if value is True</p></td>
-</tr>
-</tbody>
-</table>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+  <span class="n">ans</span> <span class="o">=</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">70</span>
 
-<span class="p">(</span><span class="n">x</span> <span class="o">==</span> <span class="mi">8</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">y</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+  <span class="k">return</span> <span class="n">ans</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">heat_boolean</span> <span class="o">=</span> <span class="n">is_it_hot</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">heat_boolean</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="multiple-inputs-outputs">
+<h2>Multiple inputs/outputs<a class="headerlink" href="#multiple-inputs-outputs" title="Permalink to this headline">¶</a></h2>
+<p>Functions can have multiple arguments (and usually do)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_it_hot</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">threshold</span><span class="p">):</span>
+
+  <span class="n">ans</span> <span class="o">=</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="n">threshold</span>
+
+  <span class="k">return</span> <span class="n">ans</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">heat_boolean</span> <span class="o">=</span> <span class="n">is_it_hot</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</div>
+<p>Functions can also return multiple outputs</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_it_hot</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">threshold</span><span class="p">):</span>
+
+  <span class="n">ans</span> <span class="o">=</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="n">threshold</span>
+
+  <span class="n">degrees_c</span> <span class="o">=</span> <span class="p">(</span><span class="n">temperature</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">9</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">ans</span><span class="p">,</span> <span class="n">degrees_c</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">True</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">outs</span> <span class="o">=</span> <span class="n">is_it_hot</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">outs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21.11111111111111
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">heat_decision</span><span class="p">,</span> <span class="n">degrees_C</span> <span class="o">=</span> <span class="n">is_it_hot</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">heat_decision</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="keyword-vs-position-arguments">
+<h2>Keyword vs position arguments<a class="headerlink" href="#keyword-vs-position-arguments" title="Permalink to this headline">¶</a></h2>
+<p>Keyword arguments are nice because it’s easier to see what we’re calling and make sure we’re not mixing up the ordering</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">outs</span> <span class="o">=</span> <span class="n">is_it_hot</span><span class="p">(</span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="mi">70</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">outs</span> <span class="o">=</span> <span class="n">is_it_hot</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">outs</span> <span class="o">=</span> <span class="n">is_it_hot</span><span class="p">(</span><span class="n">threshold</span> <span class="o">=</span> <span class="mi">70</span><span class="p">,</span> <span class="n">temperature</span> <span class="o">=</span> <span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We should try not to reverse the ordering, even though we can</p>
+<p>We can’t have keyword arguments before positional arguments but we can do the other way around.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_it_hot</span><span class="p">(</span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_1719/231279612.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">is_it_hot</span><span class="p">(</span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">)</span>
+                               <span class="o">^</span>
+<span class="ne">SyntaxError</span>: positional argument follows keyword argument
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_it_hot</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="mi">70</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(False, 15.555555555555557)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="n">x</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 3.0367544 , -1.79658673, -4.11818002, -2.5257458 ,  5.84546053,
+       -1.52227407, -1.86497393])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also have default values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_it_hot</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="mi">70</span><span class="p">):</span>
+
+  <span class="n">ans</span> <span class="o">=</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="n">threshold</span>
+
+  <span class="n">degrees_c</span> <span class="o">=</span> <span class="p">(</span><span class="n">temperature</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">9</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">ans</span><span class="p">,</span> <span class="n">degrees_c</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_it_hot</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(False, 15.555555555555557)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_it_hot</span><span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mi">55</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(True, 15.555555555555557)
 </pre></div>
 </div>
 </div>
@@ -805,17 +652,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Variables.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Tuples.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">1.2 - Variables</p>
+            <p class="prev-next-title">3.1 - Tuples</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="IntrotoArrays.html" title="next page">
+    <a class='right-next' id="next-link" href="Lists.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1.4 - Intro to Arrays</p>
+        <p class="prev-next-title">3.3 - Lists</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

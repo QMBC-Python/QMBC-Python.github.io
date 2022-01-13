@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2.1 - If statements &#8212; Quantitative Methods for Biologists - Python</title>
+    <title>3.4 - Strings &#8212; Quantitative Methods for Biologists - Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.2 - For Loops" href="ForLoops.html" />
-    <link rel="prev" title="In-class activities" href="Day1_InClass.html" />
+    <link rel="next" title="3.5 - Dictionaries" href="Dictionaries.html" />
+    <link rel="prev" title="3.3 - Lists" href="Lists.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -145,9 +145,9 @@
   Day 2
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IfStatements.html">
    2.1 - If statements
   </a>
  </li>
@@ -172,7 +172,7 @@
   Day 3
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Tuples.html">
    3.1 - Tuples
@@ -188,8 +188,8 @@
    3.3 - Lists
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Strings.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    3.4 - Strings
   </a>
  </li>
@@ -266,7 +266,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/IfStatements.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/Strings.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -293,7 +293,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/IfStatements.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Strings.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -310,29 +310,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video">
-   Video
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slides">
-   Slides
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notes">
-   Notes
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -340,107 +317,21 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>2.1 - If statements</h1>
+                <h1>3.4 - Strings</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video">
-   Video
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slides">
-   Slides
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notes">
-   Notes
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/IfStatements.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="if-statements">
-<h1>2.1 - If statements<a class="headerlink" href="#if-statements" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="video">
-<h2>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h2>
-<p>Video: If statements</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=erKI7nPX82Q
-</pre></div>
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Strings.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="strings">
+<h1>3.4 - Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h1>
 </div>
-<div class="output text_html">
-<iframe
-    width="730"
-    height="410"
-    src="https://www.youtube.com/embed/erKI7nPX82Q?fs=1"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
-</div>
-</div>
-<div class="section" id="slides">
-<h2>Slides<a class="headerlink" href="#slides" title="Permalink to this headline">¶</a></h2>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "1afe5c32619848fb90a0ae3654401f62"}
-</script></div>
-</div>
-</div>
-<div class="section" id="notes">
-<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
-<p><img alt="picture" src="https://raw.githubusercontent.com/QMBC-Python/QMBC-Python.github.io/main/images/IfStatement.jpg" /></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="mi">65</span>
-
-<span class="k">if</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;put on jacket&#39;</span><span class="p">)</span>
-
-<span class="k">elif</span> <span class="n">t</span> <span class="o">&gt;=</span> <span class="mi">40</span> <span class="ow">and</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="mi">60</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;put on sweater&#39;</span><span class="p">)</span>
-
-<span class="k">else</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;put on sunglasses&#39;</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;go outside&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>put on sunglasses
-go outside
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"d26633c2cbf943e29aeb788bc55c9ebb": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "1afe5c32619848fb90a0ae3654401f62": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_d26633c2cbf943e29aeb788bc55c9ebb", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7fedfc8dcf90>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.osf.io/render?url=https://osf.io/znr6y/?direct%26mode=render%26action=download%26mode=rende\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}}, "version_major": 2, "version_minor": 0}
-</script>
-
 
     <script type="text/x-thebe-config">
     {
@@ -467,17 +358,17 @@ go outside
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Day1_InClass.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Lists.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">In-class activities</p>
+            <p class="prev-next-title">3.3 - Lists</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ForLoops.html" title="next page">
+    <a class='right-next' id="next-link" href="Dictionaries.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">2.2 - For Loops</p>
+        <p class="prev-next-title">3.5 - Dictionaries</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
