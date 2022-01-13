@@ -23,7 +23,6 @@ parts:
     - file: content/Functions.ipynb
     - file: content/Lists.ipynb
     - file: content/Strings.ipynb
-    - file: content/Dictionaries.ipynb
   - caption: Homework
     chapters:
     - file: homeworks/HW_Day1.ipynb
