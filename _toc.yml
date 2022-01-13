@@ -17,6 +17,13 @@ parts:
     - file: content/ForLoops.ipynb
     - file: content/Objects.ipynb
     - file: content/Day2_InClass_Activities.ipynb
+  - caption: Day 3
+    chapters:
+    - file: content/Tuples.ipynb
+    - file: content/Functions.ipynb
+    - file: content/Lists.ipynb
+    - file: content/Strings.ipynb
+    - file: content/Dictionaries.ipynb
   - caption: Homework
     chapters:
     - file: homeworks/HW_Day1.ipynb
