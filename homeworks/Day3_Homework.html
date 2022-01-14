@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Section 1: Function Fun &#8212; Quantitative Methods for Biologists - Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Homework 2 Solutions" href="HW_Day2_Solutions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Quantitative Methods for Biologists - Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/StructureofPython.html">
+   1.1 - Structure of Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Variables.html">
+   1.2 - Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Operators.html">
+   1.3 - Operators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/IntrotoArrays.html">
+   1.4 - Intro to Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Indexing.html">
+   1.5 - Indexing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Plotting.html">
+   1.6 - Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Day1_InClassSlides.html">
+   In-class slides
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Day1_InClass.html">
+   In-class activities
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/IfStatements.html">
+   2.1 - If statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/ForLoops.html">
+   2.2 - For Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Objects.html">
+   2.3 - Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Day2_InClass_Activities.html">
+   2 - In-class activities
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Tuples.html">
+   3.1 - Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Functions.html">
+   3.2 - Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Lists.html">
+   3.3 - Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Strings.html">
+   3.4 - Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Dictionaries.html">
+   3.5 - Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../content/Day3_InClass_Activities1.html">
+   Functions (self-paced)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Homework
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="HW_Day1.html">
+   Homework 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HW_Day1_Solutions.html">
+   Homework 1 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HW_Day2.html">
+   Homework 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HW_Day2_Solutions.html">
+   Homework 2 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Section 1: Function Fun
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/homeworks/Day3_Homework.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/homeworks/Day3_Homework.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Section 1: Function Fun
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#section-2-aneuploidy-exercise">
+   Section 2: Aneuploidy Exercise
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hints">
+   Hints
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Section 1: Function Fun</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Section 1: Function Fun
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#section-2-aneuploidy-exercise">
+   Section 2: Aneuploidy Exercise
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hints">
+   Hints
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/homeworks/Day3_Homework.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="section-1-function-fun">
+<h1>Section 1: Function Fun<a class="headerlink" href="#section-1-function-fun" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p>Write a function which takes numbers <code class="docutils literal notranslate"><span class="pre">(x,</span> <span class="pre">y,</span> <span class="pre">z)</span></code>. The default of z should be 10. Have it create <code class="docutils literal notranslate"><span class="pre">z</span></code> random integers that are evenly likely to be anywhere between <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> (up to but not including y, as is traditional in python).</p></li>
+</ol>
+<p>Do not use <code class="docutils literal notranslate"><span class="pre">np.random.randint</span></code>, which is a function that does this… Only use <code class="docutils literal notranslate"><span class="pre">np.random.rand</span></code> from the random family.</p>
+<p>Pull out all the stops for this one. Check the inputs make sense and have error messages if they don’t. Use a doc string and comment your code. Convince yourself that your function does what you want by testing some aspects of it.</p>
+<p>Paste the code for this function in learning catalytics.</p>
+<ol class="simple">
+<li><p>Paste the code of how you tested you function.</p></li>
+</ol>
+</div>
+<div class="section" id="section-2-aneuploidy-exercise">
+<h1>Section 2: Aneuploidy Exercise<a class="headerlink" href="#section-2-aneuploidy-exercise" title="Permalink to this headline">¶</a></h1>
+<p><strong>Background:</strong> Cancer cells are often aneuploid, which means they have gained or lost copies of certain chromosomes. Some wild strains of yeast also show this property, sometimes in response to extreme stress, but also as an apparently normal variation.</p>
+<p><strong>Glossary:</strong></p>
+<p>Reminder: chromosomes are made up of DNA. Genes are contained in chromosomes. Each chromosome contains hundreds to thousands of genes.</p>
+<p><em>Aneuploid</em>: The occurrence of extra or missing chromosomes</p>
+<p><em>Euploid</em>: Having the normal number of chromosomes for a species</p>
+<p><em>Gene expression</em>: the process by which DNA is converted into a functional product, first to RNA then to protein.</p>
+<p><strong>Data:</strong> The data are in an Excel spreadsheet, AneuploidStrains_cropped.xlsx, located here: https://osf.io/hxvfb/. Download it and open in excel so you can take a look at the actual data, but the next cell loads it in automatically.</p>
+<p>A DNA and RNA sequencing experiment was performed on several closely related yeast strains. For each gene, DNA sequencing gives us the number of copies of that gene in the DNA. RNA sequencing gives us the amount of expression of that gene (how much it’s actually being converted to RNA/proteins).</p>
+<p><strong>Each column is a comparison of relative number of copies (DNA data) or gene expression levels (RNA data) between two yeast strains. Each row is a different gene (the gene names are in column A).</strong></p>
+<p>For example, column B compares strain YJM418 with strain YJM308. There are a total of 6 pairs of comparisons for both DNA (colored blue; columns B - G) and RNA (colored black, columns H - R). Each cell contains a value that is log2 of the <strong>ratio</strong> of the # of copies/gene expression level for the left-hand strain (e.g. YJM428) divided by the # of copies/gene expression level for the right-hand strain (e.g. YJM308).  So for example, the value in cell 3D of -0.196583 means that the ratio of YJM428 / YJM328 was 0.87 for this particular gene.</p>
+<p>If all the copy #s of each gene were identical between the two strains, all of the values would be 0. Each comparison is between an aneuploid strain (the strain of interest) and a euploid strain, so we can compare the number of copies of the gene/gene expression of the aneuploid strain to what is “normal”.</p>
+<p>The DNA data provides only 1 replicate for each gene, whereas the RNA data often contains replicates (repeated experiments). For example, columns H and I are replicates as indicated by the ‘rep1’ and ‘rep 2’at the end of the name.</p>
+<p><strong>Scientific questions:</strong> Since these yeast cells are aneuploid (having extra or missing chromosomes), we should be able to detect which chromosome is extra or missing from the DNA sequencing data. If you have an extra copy of a chromosome, you’d expect to see more copies of the genes associated with that chromosome. This question of which chromosome is repeated or missing is what we will focus on in this homework. In particular, we will focus on the yeast strain YPS1009.</p>
+<p>We can also dive much deeper into the data to answer some pretty interesting scientific questions. Does aneuploidy lead to widespread changes in gene expression? Is RNA expression correlated directly to DNA copy number (the number of repeats of each gene)? Or are copy number variations suppressed (or exaggerated)? In other words, say one chromosome is doubled and we have double the copies of each gene on that chromosome - is the gene expression of each gene also doubled?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/hxvfb/download&#39;</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2002</span><span class="o">/</span><span class="mf">1761732949.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">io</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/hxvfb/download&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is in a pandas dataframe ( a great way of storing this data) but since we haven’t seen pandas yet, I convert it in the next cell. <code class="docutils literal notranslate"><span class="pre">headers</span></code> is a list of the column headers (so a list of strings), <code class="docutils literal notranslate"><span class="pre">gene_names</span></code> is a list of the gene names corresponding to each row, and <code class="docutils literal notranslate"><span class="pre">data</span></code> is the numerical data (with the number of rows equal to the length of gene_names and the number of columns equal to the length of headers)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">headers</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<span class="n">gene_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2002</span><span class="o">/</span><span class="mf">1491529632.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">gene_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;df&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>This file contains DNA and RNA counts across all genes for the aneuploid strain YPS1009 (in addition to others). The DNA data has already been normalized to a euploid strain (meaning a strain that has the normal number of chromosomes).</p>
+<ol class="simple">
+<li><p>Use code to find the index of the column of the numerical data the DNA is in. The header should contain both <code class="docutils literal notranslate"><span class="pre">YPS1009</span></code> and <code class="docutils literal notranslate"><span class="pre">DNA</span></code>. Enter your code.</p></li>
+</ol>
+<p>Open the hidden cells at the end for hints 1 if you get stuck.</p>
+<ol class="simple">
+<li><p>Extract the DNA data. What are the first 3 values of the DNA column?</p></li>
+</ol>
+<ol class="simple">
+<li></li>
+</ol>
+<p><strong>Gene naming:</strong></p>
+<p>Yeast gene names follow this convention:</p>
+<p>Y (for ‘yeast’)</p>
+<p>A single letter A through P for the chromosome # (yeast have 16 chromosomes)</p>
+<p>The letter L or R for whether the gene is left or right of the centromere</p>
+<p>“###”, a 3-digit number specifying its original position with respect to the centromere</p>
+<p>The letter C or W specifying whether the gene is on the Watson or the Crick strand.</p>
+<p>So, the gene YBL002W would be on yeast chromosome 2, the 2nd gene to the left of the centromere, on the Watson strand.</p>
+<p>YAL001W is the first gene on the left arm of chromosome 1 (watson strand).  What will the chromosome prefix for chromosome 12 be? Remember that it will be the letter from A to P that represents the chromosome number (16 letters for 16 chromosomes)</p>
+<p>Later, we will want to loop over chromosome number so we want to write code that gets the letter chromosome prefix.</p>
+<p>In other words, given just the number 12, what code would return the correct prefix?  Enter your code</p>
+<ol class="simple">
+<li><p>Write code that will find the indices of the gene names corresponding to chromosome 12 (in other words, indices of the relevant rows). You could also make an Boolean array if you prefer.</p></li>
+</ol>
+<p>Click on hints 2, 3, and 4 below one at a time if you get stuck (but try it for a bit first!).</p>
+<ol class="simple">
+<li><p>How many genes are on chromosome 12?</p></li>
+</ol>
+<ol class="simple">
+<li><p>Put it all together. Calculate the average DNA level for each chromosome separately (We suggest that you use a for loop to do this, and also check out nanmean instead of mean). Paste your code</p></li>
+</ol>
+<ol class="simple">
+<li><p>Plot DNA level vs chromosome (should have computed for the previous part). Remember that this data has already been normalized to a euploid strain so a value of 0 means the same number of gene copies were found in the aneuploid strain and euploid strain. Which chromosome(s) is aneuploid?</p></li>
+</ol>
+</div>
+<div class="section" id="hints">
+<h1>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h1>
+<p>Hint 1</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hint 1</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Maybe you could loop over the possible headers</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hint 2</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hint 2</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">We want to find the indices of the gene names (in `gene_names`) </span>
+<span class="sd">that contain the chromosome prefix YL</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hint 3</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hint 3</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Maybe you could loop over gene names and check the condition</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hint 4</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hint 4</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">You need a way of storing </span>
+<span class="sd">the relevant row indices. Maybe you could use a list and append to it</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "QMBC-Python/QMBC-Python.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./homeworks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="HW_Day2_Solutions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Homework 2 Solutions</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ella Batty<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
