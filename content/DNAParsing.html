@@ -1,0 +1,517 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DNA Parsing (self paced) &#8212; Quantitative Methods for Biologists - Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Homework 1" href="../homeworks/HW_Day1.html" />
+    <link rel="prev" title="Functions (self-paced)" href="Day3_InClass_Activities1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Quantitative Methods for Biologists - Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="StructureofPython.html">
+   1.1 - Structure of Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Variables.html">
+   1.2 - Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Operators.html">
+   1.3 - Operators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IntrotoArrays.html">
+   1.4 - Intro to Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Indexing.html">
+   1.5 - Indexing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Plotting.html">
+   1.6 - Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Day1_InClassSlides.html">
+   In-class slides
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Day1_InClass.html">
+   In-class activities
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IfStatements.html">
+   2.1 - If statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ForLoops.html">
+   2.2 - For Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Objects.html">
+   2.3 - Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Day2_InClass_Activities.html">
+   2 - In-class activities
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 3
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tuples.html">
+   3.1 - Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Functions.html">
+   3.2 - Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lists.html">
+   3.3 - Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Strings.html">
+   3.4 - Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Dictionaries.html">
+   3.5 - Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Day3_InClass_Activities1.html">
+   Functions (self-paced)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   DNA Parsing (self paced)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Homework
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/HW_Day1.html">
+   Homework 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/HW_Day1_Solutions.html">
+   Homework 1 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/HW_Day2.html">
+   Homework 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/HW_Day2_Solutions.html">
+   Homework 2 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/Day3_Homework.html">
+   Homework 3
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/DNAParsing.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/DNAParsing.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>DNA Parsing (self paced)</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/DNAParsing.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="dna-parsing-self-paced">
+<h1>DNA Parsing (self paced)<a class="headerlink" href="#dna-parsing-self-paced" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p>Given the following list of strings, find the index of the string that contains the substring ‘Brains’ (through code). Note you do not need to do this on one line (I didn’t). Enter your code in LC</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Chemistry is cool&#39;</span><span class="p">,</span> <span class="s1">&#39;Brains are cool&#39;</span><span class="p">,</span> <span class="s1">&#39;Trees are cool&#39;</span><span class="p">,</span> <span class="s1">&#39;Oceans are cool&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">elem</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
+  <span class="k">if</span> <span class="s1">&#39;Brains&#39;</span> <span class="ow">in</span> <span class="n">elem</span><span class="p">:</span>
+      <span class="n">brain_ind</span> <span class="o">=</span> <span class="n">i</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">brain_ind</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>Parsing DNA sequences</p>
+<p>We will be parsing a real DNA sequence to translate it into the corresponding protein sequence.</p>
+<p>DNA consists of a sequence of nucleotides (A, G, T, or C).  In the genetic code, each group of three consecutive nucleotides form a codon that translates to a single amino acid. There are a small number of common amino acids - we can use a look-up table to pair each codon with the respective amino acid. We also have stop codons that signify that the DNA should stop being translated there.</p>
+<p>In this way, we can work through a DNA sequence, taking each group of three nucleotides (the first three, then the next three, and so on) and translating them to the corresponding amino acid. The resulting sequence of amino acids constitutes the protein that the DNA sequence codes.</p>
+<p>We are getting our data from a public repository of DNA sequences from NCBI.  We will be looking at a DNA sequence from a Golden Retriever. The data can be found here.</p>
+<p>The cell below assigns the data to variables. You do not need to do anything.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dna_sequence</span></code> contains the DNA sequence.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dna_codons</span></code> stores the pairings from triplets/codons to amino acids in a dictionary. The triplets are the keys and the amino acids are the values.</p>
+<p><code class="docutils literal notranslate"><span class="pre">true_translation</span></code> contains the translated protein (from the NCBI website, under CDS/translation)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dna_sequence</span> <span class="o">=</span> <span class="s1">&#39;CTCCACCTGCTCCAGAGAGAAGGGAAGATGAGCGAGTCGAGCTCGAAGTCCAGCC</span><span class="se">\</span>
+<span class="s1">AGCCTTTGGCCTCCAAGCAGGAAAAGGACGGCACTGAGAAGCGAGGGCGGGGCCGGCCGCGCAAGCAGCCT</span><span class="se">\</span>
+<span class="s1">CCGAAGGAACCCAGTGAAGTGCCAACACCTAAGAGACCTCGGGGCCGACCAAAGGGGAGCAAAAACAAGGG</span><span class="se">\</span>
+<span class="s1">TGCTGCCAAGACCCGGAAAACTACCACAACTCCAGGGAGGAAACCGAGGGGCAGACCCAAAAAACTGGAGA</span><span class="se">\</span>
+<span class="s1">AGGAGGAAGAAGAGGGCATCTCGCAGGAGTCCTCCGAAGAGGAGCAGTGACCGCGCCGTGCCGCCCGCTCC</span><span class="se">\</span>
+<span class="s1">TTCACCGAGGGGCAGTTTCCTTCTGGGACTGGACAGCTCCGCTCCGCTCCCACCGCCCCTGCCCCTTCCCC</span><span class="se">\</span>
+<span class="s1">CAGACCCACGCCTCCCCGCCACCCCCCTGCGCCTTCACCAC&#39;</span>
+
+<span class="n">dna_codons</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;TTT&#39;</span> <span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;CTT&#39;</span> <span class="p">:</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;ATT&#39;</span> <span class="p">:</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;GTT&#39;</span> <span class="p">:</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TTC&#39;</span> <span class="p">:</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;CTC&#39;</span> <span class="p">:</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;ATC&#39;</span> <span class="p">:</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;GTC&#39;</span> <span class="p">:</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TTA&#39;</span> <span class="p">:</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;CTA&#39;</span> <span class="p">:</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;ATA&#39;</span> <span class="p">:</span> <span class="s1">&#39;I&#39;</span><span class="p">,</span> <span class="s1">&#39;GTA&#39;</span> <span class="p">:</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TTG&#39;</span> <span class="p">:</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;CTG&#39;</span> <span class="p">:</span> <span class="s1">&#39;L&#39;</span><span class="p">,</span> <span class="s1">&#39;ATG&#39;</span> <span class="p">:</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;GTG&#39;</span> <span class="p">:</span> <span class="s1">&#39;V&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TCT&#39;</span> <span class="p">:</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;CCT&#39;</span> <span class="p">:</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;ACT&#39;</span> <span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;GCT&#39;</span> <span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TCC&#39;</span> <span class="p">:</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;CCC&#39;</span> <span class="p">:</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;ACC&#39;</span> <span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;GCC&#39;</span> <span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TCA&#39;</span> <span class="p">:</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;CCA&#39;</span> <span class="p">:</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;ACA&#39;</span> <span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;GCA&#39;</span> <span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TCG&#39;</span> <span class="p">:</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;CCG&#39;</span> <span class="p">:</span> <span class="s1">&#39;P&#39;</span><span class="p">,</span> <span class="s1">&#39;ACG&#39;</span> <span class="p">:</span> <span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;GCG&#39;</span> <span class="p">:</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TAT&#39;</span> <span class="p">:</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;CAT&#39;</span> <span class="p">:</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;AAT&#39;</span> <span class="p">:</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;GAT&#39;</span> <span class="p">:</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TAC&#39;</span> <span class="p">:</span> <span class="s1">&#39;Y&#39;</span><span class="p">,</span> <span class="s1">&#39;CAC&#39;</span> <span class="p">:</span> <span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="s1">&#39;AAC&#39;</span> <span class="p">:</span> <span class="s1">&#39;N&#39;</span><span class="p">,</span> <span class="s1">&#39;GAC&#39;</span> <span class="p">:</span> <span class="s1">&#39;D&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TAA&#39;</span> <span class="p">:</span> <span class="s1">&#39;STOP&#39;</span><span class="p">,</span> <span class="s1">&#39;CAA&#39;</span> <span class="p">:</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;AAA&#39;</span> <span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;GAA&#39;</span> <span class="p">:</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TAG&#39;</span> <span class="p">:</span> <span class="s1">&#39;STOP&#39;</span><span class="p">,</span> <span class="s1">&#39;CAG&#39;</span> <span class="p">:</span> <span class="s1">&#39;Q&#39;</span><span class="p">,</span> <span class="s1">&#39;AAG&#39;</span> <span class="p">:</span> <span class="s1">&#39;K&#39;</span><span class="p">,</span> <span class="s1">&#39;GAG&#39;</span> <span class="p">:</span> <span class="s1">&#39;E&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TGT&#39;</span> <span class="p">:</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;CGT&#39;</span> <span class="p">:</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;AGT&#39;</span> <span class="p">:</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;GGT&#39;</span> <span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TGC&#39;</span> <span class="p">:</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;CGC&#39;</span> <span class="p">:</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;AGC&#39;</span> <span class="p">:</span> <span class="s1">&#39;S&#39;</span><span class="p">,</span> <span class="s1">&#39;GGC&#39;</span> <span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TGA&#39;</span> <span class="p">:</span> <span class="s1">&#39;STOP&#39;</span><span class="p">,</span> <span class="s1">&#39;CGA&#39;</span> <span class="p">:</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;AGA&#39;</span> <span class="p">:</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;GGA&#39;</span> <span class="p">:</span> <span class="s1">&#39;G&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;TGG&#39;</span> <span class="p">:</span> <span class="s1">&#39;W&#39;</span><span class="p">,</span> <span class="s1">&#39;CGG&#39;</span> <span class="p">:</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;AGG&#39;</span> <span class="p">:</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;GGG&#39;</span> <span class="p">:</span> <span class="s1">&#39;G&#39;</span> 
+           <span class="p">}</span>
+
+<span class="n">true_translation</span> <span class="o">=</span> <span class="s1">&#39;MSESSSKSSQPLASKQEKDGTEKRGRGRPRKQPPKEPSEVPTPK</span><span class="se">\</span>
+<span class="s1">RPRGRPKGSKNKGAAKTRKTTTTPGRKPRGRPKKLEKEEEEGISQESSEEEQ&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Extracting coding sequence</p></li>
+</ol>
+<p>In the description of the data on the NCBI website, we can find the information about where in the DNA sequence the coding sequence starts and stops. We see this information next to “CDS”: 28 indicates the starting position and 318 indicates the ending position.</p>
+<p>Extract this section of <code class="docutils literal notranslate"><span class="pre">dna_sequence</span></code> (note that the NCBI indexing starts at 1 and adjust accordingly!). Enter your code in LC</p>
+<p>Verify that the length of this extracted sequence is divisible by 3.</p>
+<ol class="simple">
+<li><p>Translation</p></li>
+</ol>
+<p>We are now ready to translate our coding sequence. For each consecutive triplet, we want to find the corresponding amino acid and add it to our amino acid sequence.</p>
+<p>Let’s go through an example. Let’s say the DNA sequence is:
+CCCCATAGTGGGAGC. We would separate this into triplets: CCC CAT AGT GGG AGC. We would then use the look up dictionary to convert this to amino acids: P H S G S. We can store the protein as a string: ‘PHSGR’.</p>
+<p>Stuck? Break it up into little steps.</p>
+<ol class="simple">
+<li><p>How can you index into coding_sequence to get 3 consecutive nucleotides?</p></li>
+<li><p>How do we get the amino acid that corresponds to that triplet?</p></li>
+<li><p>How can you loop through those indices so on each loop, you get a new triplet?</p></li>
+<li><p>How do we continually add those amino acids to a string? (Hints: initialize an empty string with ‘’, remember string concatenation)</p></li>
+</ol>
+<p>Enter your code in LC</p>
+<ol class="simple">
+<li><p>When we hit a stop codon (the amino acid is ‘STOP’), we want to stop translating. Add this to the code above. Enter this part of the code in LC</p></li>
+</ol>
+<p>If our sequence in the example above had been CCCCATAGTGGGAGCTAG, we would get’PHSGRSTOP’ since TAG is a stop codon. We do not want to include the ‘STOP’</p>
+<ol class="simple">
+<li><p>Verify success</p></li>
+</ol>
+<p>Compare the translated protein from your code to the true translation (stored as <code class="docutils literal notranslate"><span class="pre">true_translation</span></code>). Return True if they match (they should).</p>
+<p>Enter your code in LC</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "QMBC-Python/QMBC-Python.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Day3_InClass_Activities1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Functions (self-paced)</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../homeworks/HW_Day1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Homework 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ella Batty<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
