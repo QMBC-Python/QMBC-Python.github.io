@@ -364,22 +364,6 @@
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">elem</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">my_list</span><span class="p">):</span>
-  <span class="k">if</span> <span class="s1">&#39;Brains&#39;</span> <span class="ow">in</span> <span class="n">elem</span><span class="p">:</span>
-      <span class="n">brain_ind</span> <span class="o">=</span> <span class="n">i</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">brain_ind</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-</pre></div>
-</div>
-</div>
-</div>
 <p>Parsing DNA sequences</p>
 <p>We will be parsing a real DNA sequence to translate it into the corresponding protein sequence.</p>
 <p>DNA consists of a sequence of nucleotides (A, G, T, or C).  In the genetic code, each group of three consecutive nucleotides form a codon that translates to a single amino acid. There are a small number of common amino acids - we can use a look-up table to pair each codon with the respective amino acid. We also have stop codons that signify that the DNA should stop being translated there.</p>
