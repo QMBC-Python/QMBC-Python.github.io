@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1.1 - Structure of Python &#8212; Quantitative Methods for Biologists - Python</title>
+    <title>Functions (self-paced) &#8212; Quantitative Methods for Biologists - Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1.2 - Variables" href="Variables.html" />
-    <link rel="prev" title="Introduction" href="../intro.html" />
+    <link rel="next" title="Homework 1" href="../homeworks/HW_Day1.html" />
+    <link rel="prev" title="3.4 - Strings" href="Strings.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -98,9 +98,9 @@
   Day 1
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="StructureofPython.html">
    1.1 - Structure of Python
   </a>
  </li>
@@ -172,7 +172,7 @@
   Day 3
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Tuples.html">
    3.1 - Tuples
@@ -193,8 +193,8 @@
    3.4 - Strings
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Day3_InClass_Activities1.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Functions (self-paced)
   </a>
  </li>
@@ -266,7 +266,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/content/StructureofPython.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/content/Day3_InClass_Activities1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -293,7 +293,7 @@
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/StructureofPython.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Day3_InClass_Activities1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -310,24 +310,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video">
-   Video
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slides">
-   Slides
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -335,74 +317,63 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>1.1 - Structure of Python</h1>
+                <h1>Functions (self-paced)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#video">
-   Video
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#slides">
-   Slides
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/StructureofPython.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="structure-of-python">
-<h1>1.1 - Structure of Python<a class="headerlink" href="#structure-of-python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="video">
-<h2>Video<a class="headerlink" href="#video" title="Permalink to this headline">¶</a></h2>
-<p>Video: Structure of Python</p>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Video available at https://youtube.com/watch?v=oST7A_4Ht6o
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Day3_InClass_Activities1.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
-<div class="output text_html">
-<iframe
-    width="730"
-    height="410"
-    src="https://www.youtube.com/embed/oST7A_4Ht6o?fs=1"
-    frameborder="0"
-    allowfullscreen
-
-></iframe>
-</div></div>
 </div>
 </div>
-<div class="section" id="slides">
-<h2>Slides<a class="headerlink" href="#slides" title="Permalink to this headline">¶</a></h2>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "8378bba3003742168776f2f0dd4e22b7"}
-</script></div>
+<div class="section" id="functions-self-paced">
+<h1>Functions (self-paced)<a class="headerlink" href="#functions-self-paced" title="Permalink to this headline">¶</a></h1>
+<ol class="simple">
+<li><p>We will write a function that takes in an array, finds the second largest value of the array, and returns it. First, brainstorm with your group and write out pseudocode.</p></li>
+</ol>
+<p>Copy and paste here.</p>
+<ol class="simple">
+<li><p>Write the function that takes in an array, finds the second largest value of the array, and returns it.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Write a function that takes in an array and the number <code class="docutils literal notranslate"><span class="pre">n</span></code> and returns the value of the nth largest and nth smallest value of the array. First, write out the pseudocode with your group, then write the function. Copy and past the function here.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Test your previous function from question 3 with arrays of various size, dimensionality, and characteristics and with various values of n. Ensure the function returns the correct values (use assert!). Did all your tests work or were there any problems? If so, what were they?</p></li>
+</ol>
+<ol class="simple">
+<li><p>Modify your last function so that if n is bigger than the number of elements in the array, it doesn’t give an error, prints a text warning, and returns the smallest and largest value.</p></li>
+</ol>
+<ol class="simple">
+<li><p>Individually, not in groups (you will review each other’s functions in the next step): try to come up with a function that will do something that you think is useful. This could be anything (doesn’t have to be science). Post your code</p></li>
+</ol>
+<ol class="simple">
+<li><p>Review each of your functions together as a group. Try to give each other comments and suggestions on the code. Is there anything you realized you could improve after code review? If so, what?</p></li>
+</ol>
+<ol class="simple">
+<li><p>(Optional) Now write two functions. The first function should call the second function. Have the two functions together do something you think is useful.</p></li>
+</ol>
+<ol class="simple">
+<li><p>(Optional) Write a function that implements the factorial method.</p></li>
+</ol>
+<p>5!=5∗4∗3∗2∗1=120</p>
+<p>0! = 1</p>
+<p>Hint: You do not need to use recursion for this challenge, although you may if you know what it is.</p>
+<ol class="simple">
+<li><p>(Optional, advanced) Write a function to play rock, paper, scissors with you. In other words, you should input your choice. The function should generate the computer’s choice and return who won (‘Computer’, ‘You’, or ‘Tie’).  Outline pseudocode first.</p></li>
+</ol>
 </div>
-</div>
-</div>
-
-
-<script type="application/vnd.jupyter.widget-state+json">
-{"state": {"63533b3a0c9643df88b388b06235ebc9": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "8378bba3003742168776f2f0dd4e22b7": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_63533b3a0c9643df88b388b06235ebc9", "msg_id": "", "outputs": [{"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7faa5c207850>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.osf.io/render?url=https://osf.io/4ht93/?direct%26mode=render%26action=download%26mode=rende\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}}, "version_major": 2, "version_minor": 0}
-</script>
-
 
     <script type="text/x-thebe-config">
     {
@@ -429,17 +400,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Strings.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Introduction</p>
+            <p class="prev-next-title">3.4 - Strings</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Variables.html" title="next page">
+    <a class='right-next' id="next-link" href="../homeworks/HW_Day1.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">1.2 - Variables</p>
+        <p class="prev-next-title">Homework 1</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
