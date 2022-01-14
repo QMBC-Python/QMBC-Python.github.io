@@ -437,7 +437,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2002</span><span class="o">/</span><span class="mf">1761732949.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1977</span><span class="o">/</span><span class="mf">1761732949.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">requests</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">io</span>
@@ -452,7 +452,7 @@
 <p>This is in a pandas dataframe ( a great way of storing this data) but since we haven’t seen pandas yet, I convert it in the next cell. <code class="docutils literal notranslate"><span class="pre">headers</span></code> is a list of the column headers (so a list of strings), <code class="docutils literal notranslate"><span class="pre">gene_names</span></code> is a list of the gene names corresponding to each row, and <code class="docutils literal notranslate"><span class="pre">data</span></code> is the numerical data (with the number of rows equal to the length of gene_names and the number of columns equal to the length of headers)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">headers</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">headers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="n">gene_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 
 <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
@@ -462,8 +462,8 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2002</span><span class="o">/</span><span class="mf">1491529632.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">headers</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1977</span><span class="o">/</span><span class="mf">3626714243.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">headers</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">gene_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span>
@@ -492,19 +492,25 @@
 <p>“###”, a 3-digit number specifying its original position with respect to the centromere</p>
 <p>The letter C or W specifying whether the gene is on the Watson or the Crick strand.</p>
 <p>So, the gene YBL002W would be on yeast chromosome 2, the 2nd gene to the left of the centromere, on the Watson strand.</p>
-<p>YAL001W is the first gene on the left arm of chromosome 1 (watson strand).  What will the chromosome prefix for chromosome 12 be? Remember that it will be the letter from A to P that represents the chromosome number (16 letters for 16 chromosomes)</p>
+<p>YAL001W is the first gene on the left arm of chromosome 1 (watson strand).</p>
+<p>What will the chromosome prefix for chromosome 12 be? Remember that it will be the letter from A to P that represents the chromosome number (16 letters for 16 chromosomes)</p>
 <p>Later, we will want to loop over chromosome number so we want to write code that gets the letter chromosome prefix.</p>
-<p>In other words, given just the number 12, what code would return the correct prefix?  Enter your code</p>
+<p>In other words, given just the number 12, what code would return the correct prefix (‘YL’)?  Enter your code</p>
 <ol class="simple">
-<li><p>Write code that will find the indices of the gene names corresponding to chromosome 12 (in other words, indices of the relevant rows). You could also make an Boolean array if you prefer.</p></li>
+<li><p>Write code that will find the indices of the gene names (<code class="docutils literal notranslate"><span class="pre">gene_names</span></code>) corresponding to chromosome 12 (in other words, indices of the relevant rows). You could also make an Boolean array if you prefer.</p></li>
 </ol>
 <p>Click on hints 2, 3, and 4 below one at a time if you get stuck (but try it for a bit first!).</p>
 <ol class="simple">
-<li><p>How many genes are on chromosome 12?</p></li>
+<li><p>How many genes are on chromosome 12? Check out hint 5 if stuck.</p></li>
 </ol>
 <ol class="simple">
-<li><p>Put it all together. Calculate the average DNA level for each chromosome separately (We suggest that you use a for loop to do this, and also check out nanmean instead of mean). Paste your code</p></li>
+<li><p>Compute the average “DNA level” for chromosome 12.The DNA level for one chromosome will be the mean of the DNA level for all the genes of that chromosome. By DNA level, we mean the ratio data contained in the excel sheet - the number of copies of the aneuploid strain over the number of copies in the euploid condition. Check out <code class="docutils literal notranslate"><span class="pre">np.nanmean</span></code> instead of <code class="docutils literal notranslate"><span class="pre">np.mean</span></code></p></li>
 </ol>
+<p>Check out hint 6 if stuck.</p>
+<ol class="simple">
+<li><p>Put it all together. Calculate and store the average DNA level for each of the 16 chromosomes for the yeast YSP1009 separately.</p></li>
+</ol>
+<p>Paste your code</p>
 <ol class="simple">
 <li><p>Plot DNA level vs chromosome (should have computed for the previous part). Remember that this data has already been normalized to a euploid strain so a value of 0 means the same number of gene copies were found in the aneuploid strain and euploid strain. Which chromosome(s) is aneuploid?</p></li>
 </ol>
@@ -517,6 +523,10 @@
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hint 1</span>
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">Maybe you could loop over the possible headers</span>
+
+<span class="sd">For header, you want to check if both conditions (YSP1009/DNA) are true</span>
+
+<span class="sd">How do you check if a substring is present in a string? (covered in strings video)</span>
 <span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -553,6 +563,31 @@
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">You need a way of storing </span>
 <span class="sd">the relevant row indices. Maybe you could use a list and append to it</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hint 5</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hint 5</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This would be all the genes that have &#39;YL&#39; in their name, aka all the genes you found in the prior part.</span>
+<span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hint 6</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @markdown Hint 6</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Remember that in question 3, you found the </span>
+<span class="sd">DNA column for this yeast strain and from</span>
+<span class="sd"> question 6, you have which genes (rows) </span>
+<span class="sd"> correspond to chromosome 12.  </span>
 <span class="sd">&quot;&quot;&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
