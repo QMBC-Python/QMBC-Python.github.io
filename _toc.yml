@@ -26,6 +26,9 @@ parts:
     - file: content/Dictionaries.ipynb
     - file: content/Day3_InClass_Activities1.ipynb
     - file: content/DNAParsing.ipynb
+  - caption: Day 4
+    chapters:
+    - file: content/Stats.ipynb
   - caption: Homework
     chapters:
     - file: homeworks/HW_Day1.ipynb
