@@ -1,0 +1,703 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4 - In-class activities &#8212; Quantitative Methods for Biologists - Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Homework 1" href="../homeworks/HW_Day1.html" />
+    <link rel="prev" title="4.1 - Scipy.stats" href="Stats.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Quantitative Methods for Biologists - Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="StructureofPython.html">
+   1.1 - Structure of Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Variables.html">
+   1.2 - Variables
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Operators.html">
+   1.3 - Operators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="IntrotoArrays.html">
+   1.4 - Intro to Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Indexing.html">
+   1.5 - Indexing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Plotting.html">
+   1.6 - Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Day1_InClassSlides.html">
+   In-class slides
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Day1_InClass.html">
+   In-class activities
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="IfStatements.html">
+   2.1 - If statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ForLoops.html">
+   2.2 - For Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Objects.html">
+   2.3 - Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Day2_InClass_Activities.html">
+   2 - In-class activities
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Tuples.html">
+   3.1 - Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Functions.html">
+   3.2 - Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Lists.html">
+   3.3 - Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Strings.html">
+   3.4 - Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Dictionaries.html">
+   3.5 - Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Day3_InClass_Activities1.html">
+   Functions (self-paced)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="DNAParsing.html">
+   DNA Parsing (self paced)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Day 4
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Stats.html">
+   4.1 - Scipy.stats
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4 - In-class activities
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Homework
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/HW_Day1.html">
+   Homework 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/HW_Day1_Solutions.html">
+   Homework 1 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/HW_Day2.html">
+   Homework 2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/HW_Day2_Solutions.html">
+   Homework 2 Solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../homeworks/Day3_Homework.html">
+   Homework 3
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/Day4_InClassActivities.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Day4_InClassActivities.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#warm-up-exercises">
+   Warm-up exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heads-on-two-coin-tosses">
+     Heads on two coin tosses
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simulation-of-probability-of-a">
+     Simulation of probability of A
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rattus-binomialis">
+   Rattus binomialis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#neuron-2-sample">
+   Neuron 2-sample
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>4 - In-class activities</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#warm-up-exercises">
+   Warm-up exercises
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heads-on-two-coin-tosses">
+     Heads on two coin tosses
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#simulation-of-probability-of-a">
+     Simulation of probability of A
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rattus-binomialis">
+   Rattus binomialis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#neuron-2-sample">
+   Neuron 2-sample
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p><a href="https://colab.research.google.com/github/QMBC-Python/QMBC-Python.github.io/blob/main/content/Day4_InClassActivities.ipynb" target="_blank"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="in-class-activities">
+<h1>4 - In-class activities<a class="headerlink" href="#in-class-activities" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Upgrade scipy to latest version</span>
+<span class="o">!</span>pip install scipy --upgrade
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy in /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages (1.7.3)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy&lt;1.23.0,&gt;=1.16.5 in /opt/hostedtoolcache/Python/3.7.12/x64/lib/python3.7/site-packages (from scipy) (1.21.5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="warm-up-exercises">
+<h2>Warm-up exercises<a class="headerlink" href="#warm-up-exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="heads-on-two-coin-tosses">
+<h3>Heads on two coin tosses<a class="headerlink" href="#heads-on-two-coin-tosses" title="Permalink to this headline">¶</a></h3>
+<p>What is the probability of getting heads on two coin tosses?</p>
+</div>
+<div class="section" id="simulation-of-probability-of-a">
+<h3>Simulation of probability of A<a class="headerlink" href="#simulation-of-probability-of-a" title="Permalink to this headline">¶</a></h3>
+<p>Problem 2 from Homework 2: In the following code, what’s the chance that A will equal 1?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">A</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+  <span class="n">A</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">else</span><span class="p">:</span>
+  <span class="n">A</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rattus-binomialis">
+<h2>Rattus binomialis<a class="headerlink" href="#rattus-binomialis" title="Permalink to this headline">¶</a></h2>
+<p>Revisions:</p>
+<p>RTB wrote it, 23 April 2011 as “binodemo.m”</p>
+<p>RTB revised it, 23 May 2011 as “binorat.m”</p>
+<p>DAR updated it, 4 August 2011 as two files. This pdf and corresponding “binorat.m”</p>
+<p>JW updated and reformatted on 8 August 2011</p>
+<p>RTB added exercise 10 (number picking), 27 May 2012, saved as “BinoRat.m”
+RTB separated the four-choice probability exercise into a separate module (“Four-choice
+probability.doc”), 20 May 2014.</p>
+<p>RTB added image of rat, 01 August 2017</p>
+<p>ERBB converted to Python,  January 2022</p>
+<p>A rat is performing a “2-alternative forced choice” (2AFC) task in which it must identify an odor presented at a central port. If it detects odor ‘A’ it should choose the right-hand port for a reward; if it detects odor B it should choose the other port.</p>
+<p>Early in training, the rat seems to get it wrong as often as he gets it right. So you decide to do a test and keep track of his correct rate for a block of 50 trials. After 50 trials, we see that the rat has gotten 31 trials correct (19 trials wrong) for an average of 62% correct. You want to know if the rat has learned the task or if he is still guessing.</p>
+<p>Let’s say that we know nothing about probability theory or the binomial distribution, so we will just use the brute force power of a simple simulation.</p>
+<p><em>What is the null hypothesis?</em></p>
+<p>Since there are only two possible answers, this corresponds to a correct probability of 0.5, which is identical to the rate at which tossing a fair coin should produce a tail (or a head). So our previous question can be put as: <strong>how often would one expect to get 31 (or more) tails out of 50 coin tosses?</strong></p>
+<p><em>Why is the paranthetical “or more” added to the previous sentence?</em></p>
+<p>Well, we’re not really interested in the probability of the rat getting exactly 31 of 50 trials correct. We’re looking for conditions under which we would reject the null hypothesis of guessing. So we would clearly count any performance that was better then 31 as well. To answer with a real coin would take a long time, but computers are fast, so we can let the computer do the flipping. How?</p>
+<p><strong>Step 1: Write a single line of code to simulate a coin toss. It should return a 1 for heads and a 0 for tails.</strong></p>
+<p>How many ways can you think of to do this?</p>
+<p>To address our particular question, we need to find the number of occurrences of tails in runs of 50 tosses.</p>
+<p>How might we do this?</p>
+<p><strong>Step 2: Write a for loop to simulate 50 coin tosses and store the results in an array called tosses</strong></p>
+<p>We want to know how often a certain number of tails is likely to occur in a run of 50 tosses, so we need to repeat the coin flip 50 times. Then we can ask whether, in those 50 tosses, we observed 31 or more tails. One way to solve this problem is by writing a for loop.</p>
+<p><em>What is a for loop?</em></p>
+<p>Let’s start by initializing some variables - <em>what types of variables will we need for this simulation?</em></p>
+<p>Create your array to store the results first:</p>
+<p><code class="docutils literal notranslate"><span class="pre">all_trials</span> <span class="pre">=</span> <span class="pre">np.zeros((n,))</span></code></p>
+<p><em>Why did we initialize this variable with zeros?</em></p>
+<p>How many correct guesses did you get? Was it more or less than 31? Run your loop a few more times (but remember to reset all_trials before each time), do you get the same result? Why or why not?</p>
+<p>This was good for simulating 50 trials but if we want to answer our original question, we will need to simulate 50 trials lots of times.</p>
+<p><strong>Step 3:</strong> Code a pair of nested for loops that will do <code class="docutils literal notranslate"><span class="pre">n_sim</span></code> simulations of 50 coin tosses and store the resulting number of heads on each simulation in <code class="docutils literal notranslate"><span class="pre">sim_results</span></code>.</p>
+<p>Step 2 has us simulate flipping a coin 50 times. But we want to flip a coin 50 times lots of times so that we can generate an understanding of how likely we are to turn up 31 tails.</p>
+<p><em>How can we simulate 50 coin flips 1000 times?</em></p>
+<p><em>What additional variables will we need?</em></p>
+<p>Now we can ask how often a given result (31 or more tails) happens in 1000 simulations. To do that, we will need to write a nested for loop. Do this and compute what proportion of the time we succeeded in getting 31 or more tails.</p>
+<p><em>If you run your nested for loops again, do you get the same answer? How can you get a progressively “better” answer?</em></p>
+<p><strong>Step 4: write code that will do the same thing without for loops</strong></p>
+<p>Because numpy is vectorized, we can often do things much more efficiently using indexig and operators that work across entire arrays or functions that work along a specific dimension, wuch as down columns.</p>
+<p><em>How might you solve this problem without relying on for loops?</em></p>
+<p>This code will be much more satisfying code (fewer lines!) and it will execute much more quickly.</p>
+<p><strong>Extra step: time your two solutions</strong></p>
+<p>You can test the speed of your code in one of two ways. The first is in the next cell: import the package time, record the start time, record the end time, and print the difference (will be in seconds).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="c1"># Code I am timing</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">*</span> <span class="mi">10</span>
+<span class="n">end</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.151199340820312e-05
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or you can use %%timeit if you are using a jupyter notebook (or colab notebook like this one). This tests the code in the same cell and does a more rigorous test by running it many times and computing the average runtime.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it
+<span class="c1"># Code I am timing</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">*</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.7 ns ± 0.135 ns per loop (mean ± std. dev. of 7 runs, 100000000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Test both of your solutions (for loops and vectorized version) and see the speed difference.</p>
+<p><strong>Step 5: Using scipy.stats.binom, write code that will give the probability of getting 31 or more correct answers</strong></p>
+<p>You might vaguely recall that events like coin tosses, where there are only two possible outcomes, are described by the binomial distribution . Based on your knowledge of
+Python, you might expect that there is an existing function that will make our task easier. There are a few - we will use <code class="docutils literal notranslate"><span class="pre">scipy.stats.binom</span></code></p>
+<p><em>Using <code class="docutils literal notranslate"><span class="pre">scipy.stats.binom</span></code>, what is the probability of getting (exactly) 5 heads from 10 tosses? How can we use binom.pmf to solve this question?
+How can we use binom.cdf to solve this question?</em></p>
+<p><em>What are cumulative distribution functions (CDFs) and probability density functions (PDFs)? Which function would be appropriate to use to determine the probability of getting 5 or fewer heads from ten tosses?</em></p>
+<p><strong>EXTRA Step 6: Visualize the results from your simulation</strong></p>
+<p>Use the array named <code class="docutils literal notranslate"><span class="pre">sim_results</span></code> from Step 3 and plot its values.</p>
+<p>Now, calculate the mean, standard deviation and standard error of <code class="docutils literal notranslate"><span class="pre">sim_results</span></code>. How do these values change as a function of the number of simulations?</p>
+<p>Remake a histogram plot of <code class="docutils literal notranslate"><span class="pre">sim_results</span></code> but change the Y-axis values to percent occurrence rather than count number.</p>
+</div>
+<div class="section" id="neuron-2-sample">
+<h2>Neuron 2-sample<a class="headerlink" href="#neuron-2-sample" title="Permalink to this headline">¶</a></h2>
+<p>Revisions:
+RTB wrote it, 24 April 2013 as ‘CellBodyAreaAnalysis.m’</p>
+<p>MIS added Learning Objectives, question about Yeast data, 31 July 2014</p>
+<p>RTB changed it to do resampling with replacement (i.e. bootstrap) 13 July 2016 (solution code more general,
+now called ‘Resample2sample.m’)</p>
+<p>RTB converted it back to a permutation test. Efron: “When there is something to permute, it is a good idea to
+do so” (solution code ‘Perm2Sample.m’)</p>
+<p>RTB made up new data with a larger sample size (n=50 for each group), 31 July 2018</p>
+<p>RTB re-wrote ‘Perm2Sample.m’ for more flexibility, 31 July 2018</p>
+<p>RTB revised to more generally introduce the concept of the bootstrap, 15 August 2020</p>
+<p>EB converted to Python, January 2022</p>
+<p><strong>Learning objectives covered:</strong></p>
+<p>• Plot experimental data and outcomes of simulations</p>
+<p>• Compute summary statistics from a dataset</p>
+<p>• Use computer simulations to build intuition about random variables</p>
+<p>• Simulate different kinds of random distributions</p>
+<p>• Articulate and code the Null Hypothesis</p>
+<p>• Generate a simulated distribution under the Null Hypothesis</p>
+<p>• Compare simulated results to data and obtain a p-value</p>
+<p>• Compare simulation-based approaches to standard hypothesis tests</p>
+<p>We are interested in morphological differences between two different types of pyramidal neurons in the cerebral cortex. One type is called “feedback” (FB) and the other is called “feedforward” (FF). We have used a genetically modified rabies virus to label the two populations, filling each labeled neuron completely. This allows us to reconstruct each neuron and make a number of measurements. For this exercise, will compare the area of the cell body from 50 neurons of each cell type.</p>
+<p>Load in the file called ‘cellBodyArea.mat’ (this is done in the next cell).
+This file contains two variables, FB and FF, each of which contains fifty values consisting of the measurements of the cell body area for feedback (FB) and feedforward (FF) neurons.</p>
+<p>Your goal is to test the hypothesis that the cell bodies of FB neurons are larger in area than those of the FF neurons. But instead of using a “classical” statistical test, such as the 2-sample t-test or the Wilcoxon Rank Sum Test, we are going to create our own test and then compare it with the results from classical tests.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.io</span> <span class="k">as</span> <span class="nn">sio</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://osf.io/uegbq/download&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">sio</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">))</span>
+
+<span class="n">FB</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;FB&#39;</span><span class="p">]</span>
+<span class="n">FF</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;FF&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="simple">
+<li><p>Load in the file called ‘cellBodyArea.mat’. This file contains two variables, FF and FB, each of which contains 50 values consisting of the measurements of the cell body area for Feedback (FB) and FeedForward (FF) neurons.</p></li>
+</ol>
+<p>Your goal is to test the hypothesis that the cell bodies of FB neurons are larger in area than those of the FF neurons. What is the actual difference in mean values of the two populations?</p>
+<ol class="simple">
+<li><p>Your goal is to test the hypothesis that the cell bodies of FB neurons are larger in area than those of the FF neurons. But instead of using a “classical” statistical test, such as the 2-sample t-test or the Wilcoxon Rank Sum Test, we are going to create our own test and then compare it with the results from classical tests.</p></li>
+</ol>
+<p>State the null hypothesis, H0, in your own words.</p>
+<ol class="simple">
+<li><p>Your goal is to test the hypothesis that the cell bodies of FB neurons are larger in area than those of the FF neurons.</p></li>
+</ol>
+<p>State in your own words the meaning of the p-value that you will obtain.</p>
+<ol class="simple">
+<li><p>Imagine that we’ve pooled all of the data with this line of code:</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">H0_data</span>&#160; <span class="pre">=</span> <span class="pre">np.concatenate((FB,</span> <span class="pre">FF),</span> <span class="pre">axis</span> <span class="pre">=</span> <span class="pre">0)</span></code></p>
+<p>Now write a line of code that will “shuffle” the H0data.</p>
+<ol class="simple">
+<li><p>Devise an algorithm that will simulate your experiment under H0 thousands of times, and then determine the the probability that we would obtain a difference in the means as large or larger than what we measured experimentally. What is your p-value?</p></li>
+</ol>
+<ol class="simple">
+<li><p>What is the p-value for the analogous 1-tailed, 2-sample t-test?</p></li>
+</ol>
+<ol class="simple">
+<li><p>Given our hypothesis (FB neurons are larger than FF) and the H0 distribution of FB - FF, which tail are we interested in?</p></li>
+</ol>
+<ol class="simple">
+<li><p>How would you convert your test to a two-tailed version?</p></li>
+</ol>
+<ol class="simple">
+<li><p>Which version of the test gives us more statistical power?</p></li>
+</ol>
+<ol class="simple">
+<li><p>What is a p-value?</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "QMBC-Python/QMBC-Python.github.io",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="Stats.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">4.1 - Scipy.stats</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../homeworks/HW_Day1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Homework 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Ella Batty<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
