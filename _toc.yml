@@ -29,6 +29,7 @@ parts:
   - caption: Day 4
     chapters:
     - file: content/Stats.ipynb
+    - file: content/Day4_InClassActivities.ipynb
   - caption: Homework
     chapters:
     - file: homeworks/HW_Day1.ipynb
