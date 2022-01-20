@@ -39,3 +39,4 @@ parts:
     - file: homeworks/Day3_Homework.ipynb
     - file: homeworks/HW_Day3_Solutions.md
     - file: homeworks/QMBC_Homework4.ipynb
+    - file: homeworks/HW_Day4_Solutions.md
